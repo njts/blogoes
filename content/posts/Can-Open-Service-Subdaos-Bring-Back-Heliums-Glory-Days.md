@@ -112,7 +112,7 @@ Hotspots/modems are the first points of contact between the user and the destina
 ![Meson + Helium 5G](https://coldcdn.com/api/cdn/arweave/0aOj7CZtD2EZhg0vU4ESQVfNCaBu9pJaM9MKrOOdfug)
 
 
-|                   | Costs | Server load | Letency |
+|                   | Costs | Server load | Latency |
 |-------------------|-------|-------------|---------|
 | Server-side      | High  | High        | High    |
 | Traditional CDNs  | Low   | Low         | Median  |
