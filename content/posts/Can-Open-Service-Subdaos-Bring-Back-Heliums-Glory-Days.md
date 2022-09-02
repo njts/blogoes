@@ -118,7 +118,7 @@ Hotspots/modems are the first points of contact between the user and the destina
 | Traditional CDNs  | Low   | Low         | Median  |
 | Meson + Helium 5G | Low   | Low         | Low     |
 
-In this day and age, using server-side caching is something I think you should only do if you're also high. I know, your latest and greatest WordPress server-side caching plugin functions like a magic.
+In this day and age, using server-side caching is something I think you should only use if you're also high. I know, your latest and greatest WordPress server-side caching plugin functions like a magic.
 Hovever, this method has repeatedly been shown to be ineffective when subjected to high loads. You'll need an offsite cache solution. 
 
 
