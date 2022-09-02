@@ -1,0 +1,130 @@
+baseURL: "https://blgs.pages.dev/"
+title: Nijatoes - Blog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: 🪓
+  description: "This blog is an archive of my experiences on some different subjects"
+  keywords: [Web3, Cloud, Back-end]
+  author: Nijatoes
+  # author: ["Me", "You"] # multiple authors
+  images: ["/cover/twitter-cover.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/ico/favicon.ico"
+    favicon16x16: "/ico/favicon-16x16.png"
+    favicon32x32: "/ico/favicon-32x32.png"
+    apple_touch_icon: "/ico/apple-icon-60x60.png"
+    safari_pinned_tab: "/ico/apple-icon-152x152.png"
+
+  label:
+    text: "Nijatoes"
+    icon: /other/Axe_001.png
+    iconHeight: 50
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: 🪓
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: This blog is an archive of my experiences on some different subjects
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/nijatoes"
+  
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/nijatoes/blogoes/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: telegram
+      name: TELEGRAM
+      url: https://t.me/blogoes
+      weight: 20
+    - identifier: rp
+      name: Repost ?
+      url: /license/
+      weight: 10
+ 
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://blgs.pages.dev/sitemap.xml

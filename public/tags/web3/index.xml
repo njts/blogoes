@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>web3 on Nijatoes - Blog</title>
+    <link>https://blgs.pages.dev/tags/web3/</link>
+    <description>Recent content in web3 on Nijatoes - Blog</description>
+    <image>
+      <url>https://blgs.pages.dev/cover/twitter-cover.jpg</url>
+      <link>https://blgs.pages.dev/cover/twitter-cover.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Sep 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://blgs.pages.dev/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Can Open Service Subdaos Bring Back Helium&#39;s Glory Days?</title>
+      <link>https://blgs.pages.dev/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</link>
+      <pubDate>Thu, 01 Sep 2022 11:30:03 +0000</pubDate>
+      
+      <guid>https://blgs.pages.dev/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</guid>
+      <description>In this article, I explain why open service subdaos are very sound idea</description>
+    </item>
+    
+    <item>
+      <title>My Thoughts and Experiences On Meson - Decentralized CDN Network</title>
+      <link>https://blgs.pages.dev/posts/my-thoughts-and-experiences-on-meson-decentralized-cdn-network/</link>
+      <pubDate>Sat, 16 Jul 2022 11:30:03 +0000</pubDate>
+      
+      <guid>https://blgs.pages.dev/posts/my-thoughts-and-experiences-on-meson-decentralized-cdn-network/</guid>
+      <description>This is my first blog post on my decentralized blog and it is about the decentralized web:)</description>
+    </item>
+    
+  </channel>
+</rss>
