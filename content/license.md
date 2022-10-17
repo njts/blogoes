@@ -25,4 +25,4 @@ UseHugoToc: true
 cover:
     
 ---
-### All articles (except some images) under this domain name are my personal works. You can freely use them for any good purpose under the [`CC BY-ND 4.0`](https://creativecommons.org/licenses/by-nd/4.0/) license.
+### All articles (except some images) under nijatoes.com domain are my personal works. You can freely use them for any good purpose under the [`CC BY-ND 4.0`](https://creativecommons.org/licenses/by-nd/4.0/) license.
