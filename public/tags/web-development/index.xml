@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>web development on Nijatoes - Blog</title>
+    <link>https://nijatoes.com/tags/web-development/</link>
+    <description>Recent content in web development on Nijatoes - Blog</description>
+    <image>
+      <url>https://nijatoes.com/cover/twitter-cover.jpg</url>
+      <link>https://nijatoes.com/cover/twitter-cover.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Oct 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://nijatoes.com/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wordpress Website, But Without PHP</title>
+      <link>https://nijatoes.com/posts/wordpress-without-php/</link>
+      <pubDate>Tue, 18 Oct 2022 11:30:03 +0000</pubDate>
+      
+      <guid>https://nijatoes.com/posts/wordpress-without-php/</guid>
+      <description>Easy-to-use of wordpress and speed of static website. In this short article, I explain how I serve my new Meson.guru Wordpress websites without PHP.</description>
+    </item>
+    
+  </channel>
+</rss>

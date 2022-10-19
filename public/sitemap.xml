@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nijatoes.com/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</loc>
-    <lastmod>2022-09-01T11:30:03+00:00</lastmod>
-  </url><url>
     <loc>https://nijatoes.com/</loc>
-    <lastmod>2022-09-01T11:30:03+00:00</lastmod>
+    <lastmod>2022-10-18T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://nijatoes.com/posts/</loc>
-    <lastmod>2022-09-01T11:30:03+00:00</lastmod>
+    <lastmod>2022-10-18T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://nijatoes.com/tags/</loc>
+    <lastmod>2022-10-18T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://nijatoes.com/tags/web-development/</loc>
+    <lastmod>2022-10-18T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://nijatoes.com/posts/wordpress-without-php/</loc>
+    <lastmod>2022-10-18T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://nijatoes.com/videos/</loc>
+    <lastmod>2022-09-19T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://nijatoes.com/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</loc>
     <lastmod>2022-09-01T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://nijatoes.com/tags/web3/</loc>

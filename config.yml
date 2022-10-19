@@ -78,7 +78,8 @@ params:
   socialIcons:
     - name: twitter
       url: "https://twitter.com/nijatoes"
-  
+    - name: youtube
+      url: "https://www.youtube.com/channel/UCjiHQiwnE2Bn0hCy8IMiw-Q"
   analytics:
     google:
       SiteVerificationTag: "XYZabc"
@@ -110,14 +111,26 @@ params:
 menu:
   main:
     - identifier: telegram
-      name: TELEGRAM
+      name: Telegram
       url: https://t.me/blogoes
-      weight: 20
+      weight: 12
     - identifier: rp
-      name: Repost ?
+      name: Repost?
       url: /license/
+      weight: 11
+    - identifier: videos
+      name: Videos
+      url: /videos/
+      weight: 9
+    - identifier: github
+      name: Github
+      url: https://github.com/njts/blogoes/
       weight: 10
- 
+    - identifier: Contact
+      name: Contact
+      url: mailto:hello@nijatoes.com
+      weight: 8
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
