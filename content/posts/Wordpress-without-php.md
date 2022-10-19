@@ -38,7 +38,7 @@ editPost:
 ---
 ### What is Meson Guru? 
 
-Meson.Guru is  a semi-automatic news aggregator for Meson Network. You can find all latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.
+Meson.Guru is  a semi-automatic news aggregator for Meson Network. You can find all the latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.
 
 ![meson.guru](/img/mesonguru.png)
  
@@ -157,9 +157,9 @@ fi
 Full code is on https://github.com/njts/mesonguru
 ### Public hosting.
 
-Now we need a hosting to host our static files. Most people will most likely consider Netlify as a solution for this. It's fast and free. Hovever it doesn't fit in this situation. Netlify provides 300 minutes free build time each month. As I mentioned above, we rebuild meson.guru website every 5 minutes, and each rebuild takes about 10 seconds. A quick calculation reveals that we need approximately 1.4k minutes of build time each month. Extra 1000 minutes in Netlify cost about $14 per month.
+Now we need a hosting to host our static files. Most people will most likely consider Netlify as a solution for this. It's fast and free. However it doesn't fit in this situation. Netlify provides 300 minutes free build time each month. As I mentioned above, we rebuild meson.guru website every 5 minutes, and each rebuild takes about 10 seconds. A quick calculation reveals that we need approximately 1.4k minutes of build time each month. Extra 1000 minutes in Netlify cost about $14 per month.
 
-There are few cheap alternatives to host and deploy static website. CDN store buckets like BunnyCDN, S3 free tier, self-hosted solutions. 
+There are few cheap alternatives to host and deploy a static website. CDN store buckets like BunnyCDN, S3 free tier and self-hosted solutions. 
 I like self-hosted solutions because I have more control over them. I chose [Coolify](https://coolify.io) to host my website. Coolify is a self-hosted Heroku/Netlify alternative with a ton of great features. It has an auto deploy feature, so whenever my cron job pushes a new version of meson.guru to github, it will deploy the new versions automatically.
 
 I rented a VPS from Hetzer for $5 per month, installed Coolify on it, and used Coolify to deploy the static version of Meson.guru. It is less expensive than Netlify, and I can run a lot of other applications on the same vps.
