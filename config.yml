@@ -128,7 +128,7 @@ menu:
       weight: 10
     - identifier: Contact
       name: Contact
-      url: mailto:hello@nijatoes.com
+      url: mailto:hello@nijatoes.com?subject=nijatoes.com
       weight: 8
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
