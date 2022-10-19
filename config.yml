@@ -111,7 +111,7 @@ params:
 menu:
   main:
     - identifier: telegram
-      name: Telegram
+      name: Tg
       url: https://t.me/blogoes
       weight: 12
     - identifier: rp
