@@ -26,7 +26,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "./img/wordpress-without-PHP.jpg" # image path/url
+    image: "./img/wordpress-without-php.jpg" # image path/url
     alt: "Wordpress" # alt text
     caption: "Wordpress" # display caption under cover
     relative: false # when using page bundles set this to true
