@@ -11,7 +11,7 @@ TocOpen: true
 draft: false
 hidemeta: false
 comments: false
-description: "What is GaGaNode And How To Run It On Mobile, Windows pc, Linux Server"
+description: "GaGaNode Quick-Start Guide for Mobile, Desktop and Linux Devices"
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
