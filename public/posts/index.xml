@@ -9,7 +9,16 @@
       <link>https://nijatoes.com/cover/twitter-cover.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Oct 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://nijatoes.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Dec 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://nijatoes.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is GaGaNode And How To Run It On Mobile, Windows pc, Linux Servers (Summarized)</title>
+      <link>https://nijatoes.com/posts/what-is-gaganode-and-how-to-run-in-on-mobile/</link>
+      <pubDate>Wed, 14 Dec 2022 11:30:03 +0000</pubDate>
+      
+      <guid>https://nijatoes.com/posts/what-is-gaganode-and-how-to-run-in-on-mobile/</guid>
+      <description>What is GaGaNode And How To Run It On Mobile, Windows pc, Linux Server</description>
+    </item>
+    
     <item>
       <title>Wordpress Website, But Without PHP</title>
       <link>https://nijatoes.com/posts/wordpress-without-php/</link>
