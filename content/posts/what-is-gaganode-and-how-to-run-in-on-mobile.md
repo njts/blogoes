@@ -7,7 +7,7 @@ tags: ["web3"]
 author: "Nijat"
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: true
+TocOpen: false
 draft: false
 hidemeta: false
 comments: false
