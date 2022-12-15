@@ -25,13 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "https://coldcdn.com/api/cdn/arweave/0aOj7CZtD2EZhg0vU4ESQVfNCaBu9pJaM9MKrOOdfug" # image path/url
+    image: "/img/meson-helium5g.jpg" # image path/url
     alt: "Meson Network" # alt text
     caption: "Meson Network" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/njts/nijatoes"
+    URL: "https://github.com/njts/blogoes/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
@@ -50,7 +50,7 @@ Why does integrating Meson into the Helium network make more sense when there ar
 
 The two biggest players in the decentralized cloud industry are Akash and Flux. They're doing an excellent job of developing the decentralized clouds. However, there are some parts that I believe are missing. They have a long way to go in terms of distribution, despite how good they are at decentralization.
 
-![Flux Providers](https://coldcdn.com/api/cdn/arweave/V3a0IakWGD4KP99Hlw4gkLDPAPYZHFtOz657pzwIfQ0)
+![Flux Providers](/img/flux-providers.jpg)
 
 There are three basic types of providers in Akash and Flux.
 
@@ -69,7 +69,7 @@ It is the rarest but most valuable type of user. Home users contribute to the ne
 
 The first two types of providers provide the majority of the processing power in decentralized clouds. As far as I can see, Akash is currently working to increase home providers. One of these works was the Akash Supermini device. The Supermini can be thought of as a home server. This was a great idea, but unfortunately it's been postponed for now.
 
-![supermini](https://coldcdn.com/api/cdn/arweave/KdQzWWedu0p4cH4O1VGAukuwZtAnqqaok1rhQRX0w6w)
+![supermini](/img/akash-supermini.webp)
 
 Furthermore, these two decentralized cloud providers can only run Docker containers and do not offer IPv4 or IPv6 addresses.
 
@@ -78,7 +78,7 @@ Furthermore, these two decentralized cloud providers can only run Docker contain
 
 Helium is inherently distributed. It's not a good idea to put together and run a bunch of helium hotspot miners in one room. Each Helium hotspot must be at least 300 feet apart from the others. This ensures complete dispersion. As a result, the Helium Network has the potential to create sub-networks that operate in highly distributed networks.
 
-![Helium Map](https://coldcdn.com/api/cdn/arweave/vMFvy3_22EzL32Z302v_DbP217KGBVEAM72J9eXbhis)
+![Helium Map](/img/helium-map.png)
 
 ### What types of sub-networks are possible?
 
@@ -103,13 +103,13 @@ If Meson CDN nodes are installed in these hotspots, users connecting to the inte
 Hotspots/modems are the first points of contact between the user and the destination server. Furthermore, these are the closest possible points to install CDN servers. Traditional CDN providers are unable to easily install CDN servers at these points. If Helium and Meson collaborate to accomplish this, it may start a new era in the CDN and 5G industries.
 
 > Server-side caching
-![server-side](https://coldcdn.com/api/cdn/arweave/FYXK1fY7Q93luZl-5kc0zejF_e3RvyOnolMiXNcXVWc)
+![server-side](/img/server-side-cache.jpg)
 
 > Traditional CDNs
-![Traditional CDNs](https://coldcdn.com/api/cdn/arweave/--szbvIcV355La5VsGB3otzYmTygbhKyXYERPbHRP04)
+![Traditional CDNs](/img/traditional.jpg)
 
 > Meson + Helium 5G
-![Meson + Helium 5G](https://coldcdn.com/api/cdn/arweave/0aOj7CZtD2EZhg0vU4ESQVfNCaBu9pJaM9MKrOOdfug)
+![Meson + Helium 5G](/img/meson-helium5g.jpg)
 
 
 |                   | Costs | Server load | Latency |

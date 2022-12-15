@@ -25,13 +25,13 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "https://coldcdn.com/api/cdn/arweave/g3NYJ3v5F8NBufesCJywP4Ux1YAhbz85I7TLYtEVW38" # image path/url
+    image: "/img/meson.png" # image path/url
     alt: "Meson Network" # alt text
     caption: "Meson Network" # display caption under cover
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/njts/nijatoes/content"
+    URL: "https://github.com/njts/blogoes/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
@@ -40,7 +40,7 @@ The Web is going to be decentralized. Must be. Wait, what do we need to achieve 
 [Meson](https://meson.network) is a blockchain project working to fill part of that gap. Meson is a decentralized CDN run by people for people. It already has 30k+ edge nodes worldwide so far.
  I'm also running over 108 Meson 3.0 servers/nodes in 17 counties and 27 different cities worldwide. 
  
- ![map-1](https://coldcdn.com/api/cdn/arweave/ukN51sC5Zrh47gJvNqDSumxdL6PhaDhbU63YGlQHXbA)
+ ![map-1](/img/map-1.png)
  
  My total effective bandwidth is ~71 Gbps.
  It's inspiring to be a part of this amazing network. My next article will be about installing nodes for Meson Network and my experiences as a node runner. Wait for it.
@@ -53,7 +53,7 @@ First of all, I've spun up a VM with an NGINX server. Later, I created a simple 
 Meson's dashboard has a user-friendly and easy-to-understand UI.
 First, go to your DNS provider's dashboard, and create an A-record that points to your web server. Later, open dashboard.meson.network, create an account, > pull zones, > create pull zone.
 
-![meson-dash](https://coldcdn.com/api/cdn/arweave/fstWwrUYpv1Vig5czvtkV7EgWqz5-XNSzF-4MxTRUmQ)
+![meson-dash](/img/meson-dash.png)
 
 Enter your domain name without https. You can start using Meson for free. There is a $5 credit for new users. Give it a [try](https://dashboard.meson.network).
  
@@ -62,9 +62,9 @@ First, I've tried to connect my website directly to see what the end point is. C
 Then I noticed that the IP belongs to one of my servers, which I'm running for the Meson network. That was a fascinating moment.
 Then I also connected to another node's IP, which is run by my close friend. It's amazing.
 
-![browser-1](https://coldcdn.com/api/cdn/arweave/itPq6hxY4G-3QlXYMYMeeo8jPJPE3Vrx-PNuAjLRvOI)
-![terminal-1](https://coldcdn.com/api/cdn/arweave/5EfK94xJgnFFgYeoO_ezj4zWZugHwPHNbu6ZNstV0gM)
-![nodes-1](https://coldcdn.com/api/cdn/arweave/88fh9MxTqYSmPaD5tEc8761tZStq_vYhOD_8-03Mxdo)
+![browser-1](/img/browser-1.png)
+![terminal-1](/img/terminal-1.png)
+![nodes-1](/img/nodes-1.png)
 
 ### Test 2: Coverage 
 I've spun up 9 VMs in 7 different cities and sent a get request to https://pz-dzulrd.meson.network to see where I will be redirected.
@@ -83,7 +83,7 @@ Results👇
 ### Test 3: Gtmetrix one-to-one comparison
 I ran this test on two identical copies of this page. One copy is running on my single VPS, the other one is served by Meson Network. The results say everything. Meson is the clear winner.
 
-![compare-1](https://coldcdn.com/api/cdn/arweave/2jMWf29vD3dqvZRg8JCHoCoiFQsT54pzxqJrMk4-XPs)
+![compare-1](/img/compare-1.jpg)
 [Report link](https://gtmetrix.com/compare/3ojoLI6g/azZfx8uM)
 
 ----
@@ -106,10 +106,10 @@ I think they must build their own anycast network asap.
  
 Anycast is a network addressing and routing methodology in which a single destination IP address is shared by devices in multiple locations. The nearest device responds to requests, giving end users access to fast service without the high latency issues that can be caused by traditional geo-location solutions. This reduces latency as well as packet loss rates because data can travel on routes that are optimized for speed and not just the shortest distance. 
 > Meson 3.0 current architecture
-![meson-netw](https://coldcdn.com/api/cdn/arweave/tZoLvNkMSEySv-qZbsEQPXhlyWzdtZpI6as7bnk3ljA)
+![meson-netw](/img/meson-netw.png)
 
 > Anycast example (google.com architecture)
-![google-anycast](https://coldcdn.com/api/cdn/arweave/KhBdV84t9U-sYwlTLjUNizZRWiZ5tJpsyhDdyA5mIiA)
+![google-anycast](/img/google-anycast.png)
 
 Anycast network will increase the CDN performance tremendously. They are currently using a single VM to share the network traffic. That VM might be powerful and well-located, but it's still a single point of failure. That's why I think anycast is so important in the future of Meson.
  
