@@ -8,6 +8,19 @@
     <loc>https://nijatoes.com/tr/posts/tr/gaganode-nedir-nasil-kurulur/</loc>
     <lastmod>2022-12-14T11:30:03+00:00</lastmod>
   </url><url>
+    <loc>https://nijatoes.com/tr/</loc>
+    <lastmod>2022-12-14T11:30:03+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nijatoes.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://nijatoes.com/tr/"
+                />
+  </url><url>
     <loc>https://nijatoes.com/tr/posts/</loc>
     <lastmod>2022-12-14T11:30:03+00:00</lastmod>
     <xhtml:link
@@ -32,19 +45,6 @@
                 rel="alternate"
                 hreflang="tr"
                 href="https://nijatoes.com/tr/tags/"
-                />
-  </url><url>
-    <loc>https://nijatoes.com/tr/</loc>
-    <lastmod>2022-12-14T11:30:03+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nijatoes.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://nijatoes.com/tr/"
                 />
   </url><url>
     <loc>https://nijatoes.com/tr/tags/web3/</loc>

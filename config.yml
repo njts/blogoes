@@ -146,9 +146,9 @@ languages:
   tr:
     contentDir: content/posts/tr
     languageName: Turkish
-    title: tr
+    title: Nijatoes - Türkçe Blog
     weight: 2
   en:
     languageName: English
-    title: en
+    title: Nijatoes - Blog
     weight: 1
