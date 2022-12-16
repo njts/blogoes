@@ -38,7 +38,7 @@ editPost:
 
 ### Gaganode nedir?
 
-GaGaNode, Merkezi Olmayan Bir Konut IP + Bant Genişliği Pazar Yeridir. Web3.0 teknolojisi ile IPv4 adreslerinin küresel eksikliğini azaltmayı hedefliyor. Kullanıcılar, genel bir ağ IP adresine sahip olmasalar bile Idle Electronics'i kullanarak evde Web3 ağına katılabilir. Geliştirme için ev bant genişliği gerektiren gelecekteki teknolojiler, GaGa Düğümü aracılığıyla gerçek ev bant genişliği kaynakları elde edebilir.
+GaGaNode, Merkezi Olmayan Bir Konut IP + Bant Genişliği Pazar Yeridir. Web3.0 teknolojisi ile IPv4 adreslerinin küresel eksikliğini azaltmayı hedefliyor. Kullanıcılar, genel bir ağ IP adresine sahip olmasalar bile boşta kalan elektronik cihazları kullanarak evde Web3 ağına katılabilir. Geliştirme için ev bant genişliği gerektiren gelecekteki teknolojiler, GaGa Düğümü aracılığıyla gerçek ev bant genişliği kaynakları elde edebilir.
 
 ### GaGaNode'ları çalıştırmanın avantajları nelerdir?
 
