@@ -25,7 +25,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "./img/gaganode-center.c7715456.jpeg" # image path/url
+    image: "./img/gaganode-center.c7715456.webp" # image path/url
     alt: "Meson Network" # alt text
     caption: "Meson Network" # display caption under cover
     relative: false # when using page bundles set this to true
