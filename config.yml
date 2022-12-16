@@ -141,3 +141,14 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+languages:
+  tr:
+    contentDir: content/posts/tr
+    languageName: Turkish
+    title: tr
+    weight: 2
+  en:
+    languageName: English
+    title: en
+    weight: 1

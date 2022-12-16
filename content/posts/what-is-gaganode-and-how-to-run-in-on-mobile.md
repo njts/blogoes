@@ -95,7 +95,7 @@ Switch from PowerShell to PowerShell Admin. If you’re already working in Power
 
 #### 3.Set Token
 
-` ./apps/gaganode/gaganode.exe config set --token=your_token_here`
+`./apps/gaganode/gaganode.exe config set --token=your_token_here`
 
 #### 4.Restart APP
 
@@ -139,7 +139,7 @@ console output:
 
 `./app restart`
 
-> ### Terminal Rsecording
+> ### Terminal Recording
 [![asciicast](https://asciinema.org/a/545183.svg)](https://asciinema.org/a/545183)
 
 > ### Notice:
