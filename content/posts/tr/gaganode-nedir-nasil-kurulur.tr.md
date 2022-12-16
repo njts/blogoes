@@ -1,5 +1,5 @@
 ---
-title: "GaGaNode Nedir, Nasil Kurulur - Android, Windows, Linux Hızlı Kurulum Kılavuzu"
+title: "GaGaNode Nedir, Nasıl Kurulur - Android, Windows, Linux Hızlı Kurulum Kılavuzu"
 date: 2022-12-14T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
