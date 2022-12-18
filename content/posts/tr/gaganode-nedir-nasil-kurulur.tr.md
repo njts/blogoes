@@ -76,7 +76,7 @@ Kullanıcıların ek madencilik makinelerine yatırım yapmasına gerek yoktur; 
 ### Windows'ta PowerShell'i açın
 
 - PowerShell'i açmak için "Çalıştır" penceresini kullanın
-Çalıştır'dan yönetici ayrıcalıklarıyla Windows PowerShell'i açabilirsiniz. Bu pencereyi başlatmanın hızlı bir yolu, klavyedeki "Kazan" + "R" tuşlarına basmaktır. Ardından, "powershell" yazın ve Enter'a basın veya Tamam'ı tıklayın.
+Çalıştır'dan yönetici ayrıcalıklarıyla Windows PowerShell'i açabilirsiniz. Bu pencereyi başlatmanın hızlı bir yolu, klavyedeki "Win" + "R" tuşlarına basmaktır. Ardından, "powershell" yazın ve Enter'a basın veya Tamam'ı tıklayın.
 
 ![](/img/windows-03.c050e0c7.png)
 
