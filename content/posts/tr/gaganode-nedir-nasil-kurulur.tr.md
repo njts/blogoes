@@ -82,29 +82,41 @@ Kullanıcıların ek madencilik makinelerine yatırım yapmasına gerek yoktur; 
 
 PowerShell'den PowerShell Yöneticisine geçiş yapın. Halihazırda PowerShell'de çalışıyorsanız ancak "yönetici" moduna geçmeniz gerekiyorsa, bunu PowerShell'i kapatmadan yapabilirsiniz. Sadece bu komutu çalıştırın:
 
-- `start-process powershell -verb runas`
+```
+start-process powershell -verb runas
+```
 
 ![](/img/windows-04.6eb30a24.png)
 
 #### 1.İndirin ve Kurun
 
-`wget -Uri "https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz" -OutFile "app-windows-amd64.tar.gz" ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install`
+```
+wget -Uri "https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz" -OutFile "app-windows-amd64.tar.gz" ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install
+```
 
 #### 2.Servisi Başlatın
 
-`./app.exe service start`
+```
+./app.exe service start
+```
 
 #### 3.Tokeninizi girin
 
-`./apps/gaganode/gaganode.exe config set --token=your_token_here`
+```
+./apps/gaganode/gaganode.exe config set --token=your_token_here
+```
 
 #### 4.Servisi yeniden başlatın
 
-`./app.exe restart`
+```
+./app.exe restart
+```
 
 #### 5.Servis Durumunu Kontrol Edin
 
-`./app.exe status`
+```
+./app.exe status
+```
 
 > 1-3 dakika sonra websitesi üzerinde bir terminal kaydınız olacaktır.
 ![](/img/windows-06.0d8b27e5.png)
@@ -113,19 +125,27 @@ PowerShell'den PowerShell Yöneticisine geçiş yapın. Halihazırda PowerShell'
 
 ### Gereksinim Paketlerini Kurun
 
-`sudo apt-get update -y && sudo apt-get -y install curl tar ca-certificates`
+```
+sudo apt-get update -y && sudo apt-get -y install curl tar ca-certificates
+```
 
 #### 1. İndirin ve Kurun
 
-`curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz && tar -zxf app-linux-amd64.tar.gz && rm -f app-linux-amd64.tar.gz && cd ./app-linux-amd64 && sudo ./app service install`
+```
+curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz && tar -zxf app-linux-amd64.tar.gz && rm -f app-linux-amd64.tar.gz && cd ./app-linux-amd64 && sudo ./app service install
+```
 
 #### 2.Servisi Başlatın
 
-`sudo ./app service start`
+```
+sudo ./app service start
+```
 
 #### 5.Servis Durumunu Kontrol Edin
 
-`./app status`
+```
+./app status
+```
 
 Terminal çıktısı:
 >`meson@meson-server:~/app-linux-amd64$ ./app status
@@ -133,11 +153,15 @@ Terminal çıktısı:
 
 #### 3.Tokeninizi girin
 
-`sudo ./apps/gaganode/gaganode config set --token=your_token_here`
+```
+sudo ./apps/gaganode/gaganode config set --token=your_token_here
+```
 
 #### 4.Servisi yeniden başlatın
 
-`./app restart`
+```
+./app restart
+```
 
 > ### Terminal Kaydı
 [![asciicast](https://asciinema.org/a/545183.svg)](https://asciinema.org/a/545183)

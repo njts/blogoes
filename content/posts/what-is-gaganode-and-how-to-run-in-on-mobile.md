@@ -81,29 +81,41 @@ You can open Windows PowerShell with administrator privileges from Run. A quick 
 
 Switch from PowerShell to PowerShell Admin. If you’re already working in PowerShell but you need to switch over to `admin` mode, you can do so without closing PowerShell. Just run this command:
 
-- `start-process powershell -verb runas`
+```
+start-process powershell -verb runas
+```
 
 ![](/img/windows-04.6eb30a24.png)
 
 ####  1.Download & Install
 
-`wget -Uri "https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz" -OutFile "app-windows-amd64.tar.gz" ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install`
+```
+wget -Uri "https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz" -OutFile "app-windows-amd64.tar.gz" ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install
+```
 
 #### 2.Start Service
 
-`./app.exe service start`
+```
+./app.exe service start
+```
 
 #### 3.Set Token
 
-`./apps/gaganode/gaganode.exe config set --token=your_token_here`
+```
+./apps/gaganode/gaganode.exe config set --token=your_token_here
+```
 
 #### 4.Restart APP
 
-`./app.exe restart`
+```
+./app.exe restart
+```
 
 #### 5.Check APP Status
 
-`./app.exe status`
+```
+./app.exe status
+```
 
 > After 1-3 minutes, you will have a new terminal record at terminals open in new node.
 ![](/img/windows-06.0d8b27e5.png)
@@ -113,19 +125,27 @@ Switch from PowerShell to PowerShell Admin. If you’re already working in Power
 
 ### Install Dependencies Packages
 
-`sudo apt-get update -y && sudo apt-get -y install curl tar ca-certificates`
+```
+sudo apt-get update -y && sudo apt-get -y install curl tar ca-certificates
+```
 
 #### 1.Download & Install
 
-`curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz && tar -zxf app-linux-amd64.tar.gz && rm -f app-linux-amd64.tar.gz && cd ./app-linux-amd64 && sudo ./app service install`
+```
+curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz && tar -zxf app-linux-amd64.tar.gz && rm -f app-linux-amd64.tar.gz && cd ./app-linux-amd64 && sudo ./app service install
+```
 
 #### 2.Start Service
 
-`sudo ./app service start`
+```
+sudo ./app service start
+```
 
 #### 3.Check APP Status
 
-`./app status`
+```
+./app status
+```
 
 console output:
 >`meson@meson-server:~/app-linux-amd64$ ./app status
@@ -133,11 +153,15 @@ console output:
 
 #### 4.Set Token
 
-`sudo ./apps/gaganode/gaganode config set --token=your_token_here`
+```
+sudo ./apps/gaganode/gaganode config set --token=your_token_here
+```
 
 #### 5.Restart APP
 
-`./app restart`
+```
+./app restart
+```
 
 > ### Terminal Recording
 [![asciicast](https://asciinema.org/a/545183.svg)](https://asciinema.org/a/545183)

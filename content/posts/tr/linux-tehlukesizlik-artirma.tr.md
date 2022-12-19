@@ -6,12 +6,12 @@ date: 2022-12-18T11:30:03+00:00
 tags: ["linux"]
 author: "Nijat"
 # author: ["Me", "You"] # multiple authors
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi"
+description: ""
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
@@ -35,56 +35,97 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:
 
-1.Yeni istifadəçi yaratmaq
-> ```useradd <user>```
+#### 1.Yeni istifadəçi yaratmaq
+```
+useradd <user>
+```
 
-2.İstifadəçiyə sudo icazəsi vermək
-> ```usermod -aG sudo <user>```
-> ```passwd <user>```
+#### 2.İstifadəçiyə sudo icazəsi vermək
+```
+usermod -aG sudo <user>
+```
+```
+passwd <user>
+```
 
-3.SSH key yaradılması
-> RSA ```ssh-keygen```
+#### 3.SSH key yaradılması
 
-> ED25519 (Tövsiyyə olunan):```ssh-keygen -t ed25519```
+RSA
+```
+ssh-keygen
+```
 
-4.SSH public keyi serverə kopyalamaq
-> ```ssh-copy-id -i <key> user@host```
+ED25519 (Tövsiyyə olunan):
+```
+ssh-keygen -t ed25519
+```
 
-5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək
+#### 4.SSH public keyi serverə kopyalamaq
+```
+ssh-copy-id -i <key> user@host
+```
 
-> Orijinal faylı saxlamaq:
-```sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig```
+#### 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək
 
-> sshd_config faylını nano text editor ilə açmaq:
-> ```sudo nano /etc/ssh/sshd_config```
+Orijinal faylı saxlamaq:
+```
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
+```
 
-6. Avtomatik yenilənmələri açmaq 
-> ```sudo apt install unattended-upgrades```
+sshd_config faylını nano text editor ilə açmaq:
+```
+sudo nano /etc/ssh/sshd_config
+```
 
-> ```dpkg-reconfigure --priority=low unattended-upgrades```
+#### 6. Avtomatik yenilənmələri açmaq 
+```
+sudo apt install unattended-upgrades
+```
 
-7.UFW firewall aktivləşdirmə
-> ```sudo apt install ufw```
+```
+dpkg-reconfigure --priority=low unattended-upgrades
+```
 
-> ```ufw allow <port>```
+#### 7.UFW firewall aktivləşdirmə
+```
+sudo apt install ufw
+```
 
-> ```sudo systemctl enable ufw && ufw enable```
+```
+ufw allow <port>
+```
 
-8.Echo istəkləri (ping) bağlamaq
-> ```sudo nano /etc/ufw/before.rules```
+```
+sudo systemctl enable ufw && ufw enable
+```
 
-> ```-A --ufw-before-input -p --icmp-type echo-request -j DROP```
+#### 8.Echo istəkləri (ping) bağlamaq
+```
+sudo nano /etc/ufw/before.rules
+```
 
-9.Fail2Ban
-> ```sudo apt install fail2ban```
-> ```sudo nano /etc/fail2ban/jail.d/webmin.conf```
-> ```[webmin-auth]
+```
+-A --ufw-before-input -p --icmp-type echo-request -j DROP
+```
+
+#### 9.Fail2Ban
+``` 
+sudo apt install fail2ban 
+```
+```
+sudo nano /etc/fail2ban/jail.d/sshd.conf
+```
+```
+[sshd]
 enabled = true
-port    = <port>
-filter  = webmin-auth
-logpath  = /var/log/auth.log
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
 maxretry = 3
-bantime = 120```
-> ```sudo reboot```
+bantime = 120
+ignoreip = whitelist-IP
+```
+```
+sudo reboot
+```

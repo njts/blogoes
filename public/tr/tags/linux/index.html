@@ -3,7 +3,7 @@
 1.Yeni istifadəçi yaratmaq
 useradd &lt;user>
 2.İstifadəçiyə sudo icazəsi vermək
-usermod -aG sudo &lt;user>
+usermod -aG sudo &lt;user> passwd &lt;user>
 3.SSH key yaradılması
 RSA ssh-keygen
 ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
@@ -11,12 +11,11 @@ ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
 ssh-copy-id -i &lt;key> user@host
 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək
 Orijinal faylı saxlamaq: sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
-sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config
-Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;111 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/linux-tehlukesizlik-artirma/></a></article><article class="post-entry tag-entry"><figure class=entry-cover><img loading=lazy src=https://nijatoes.com/img/background-g80913faae_640.jpg alt="Meson Network"></figure><header class=entry-header><h2>Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi</h2></header><div class=entry-content><p>Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:
+sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;140 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/linux-tehlukesizlik-artirma/></a></article><article class="post-entry tag-entry"><figure class=entry-cover><img loading=lazy src=https://nijatoes.com/img/background-g80913faae_640.jpg alt="Meson Network"></figure><header class=entry-header><h2>Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi</h2></header><div class=entry-content><p>Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:
 1.Yeni istifadəçi yaratmaq
 useradd &lt;user>
 2.İstifadəçiyə sudo icazəsi vermək
-usermod -aG sudo &lt;user>
+usermod -aG sudo &lt;user> passwd &lt;user>
 3.SSH key yaradılması
 RSA ssh-keygen
 ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
@@ -24,8 +23,7 @@ ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
 ssh-copy-id -i &lt;key> user@host
 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək
 Orijinal faylı saxlamaq: sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
-sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config
-Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;111 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/posts/tr/linux-tehlukesizlik-artirma/></a></article></main><footer class=footer><span>&copy; 2022 <a href=https://nijatoes.com/tr/>Nijatoes - Türkçe Blog</a></span>
+sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;140 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/posts/tr/linux-tehlukesizlik-artirma/></a></article></main><footer class=footer><span>&copy; 2022 <a href=https://nijatoes.com/tr/>Nijatoes - Türkçe Blog</a></span>
 <span>Powered by
 <a href=https://meson.network/ rel="noopener noreferrer" target=_blank>Meson</a>,
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &

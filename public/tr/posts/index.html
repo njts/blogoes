@@ -3,7 +3,7 @@
 1.Yeni istifadəçi yaratmaq
 useradd &lt;user>
 2.İstifadəçiyə sudo icazəsi vermək
-usermod -aG sudo &lt;user>
+usermod -aG sudo &lt;user> passwd &lt;user>
 3.SSH key yaradılması
 RSA ssh-keygen
 ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
@@ -11,8 +11,7 @@ ED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519
 ssh-copy-id -i &lt;key> user@host
 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək
 Orijinal faylı saxlamaq: sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
-sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config
-Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;111 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/posts/tr/linux-tehlukesizlik-artirma/></a></article><article class=post-entry><figure class=entry-cover><img loading=lazy src=https://nijatoes.com/img/gaganode-center.c7715456.webp alt="Meson Network"></figure><header class=entry-header><h2>GaGaNode Nedir, Nasıl Kurulur - Android, Windows, Linux Hızlı Kurulum Kılavuzu</h2></header><div class=entry-content><p>Gaganode nedir? GaGaNode, Merkezi Olmayan Bir Konut IP + Bant Genişliği Pazar Yeridir. Web3.0 teknolojisi ile IPv4 adreslerinin küresel eksikliğini azaltmayı hedefliyor. Kullanıcılar, genel bir ağ IP adresine sahip olmasalar bile boşta kalan elektronik cihazları kullanarak evde Web3 ağına katılabilir. Geliştirme için ev bant genişliği gerektiren gelecekteki teknolojiler, GaGa Düğümü aracılığıyla gerçek ev bant genişliği kaynakları elde edebilir.
+sshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config...</p></div><footer class=entry-footer><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;140 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" href=https://nijatoes.com/tr/posts/tr/linux-tehlukesizlik-artirma/></a></article><article class=post-entry><figure class=entry-cover><img loading=lazy src=https://nijatoes.com/img/gaganode-center.c7715456.webp alt="Meson Network"></figure><header class=entry-header><h2>GaGaNode Nedir, Nasıl Kurulur - Android, Windows, Linux Hızlı Kurulum Kılavuzu</h2></header><div class=entry-content><p>Gaganode nedir? GaGaNode, Merkezi Olmayan Bir Konut IP + Bant Genişliği Pazar Yeridir. Web3.0 teknolojisi ile IPv4 adreslerinin küresel eksikliğini azaltmayı hedefliyor. Kullanıcılar, genel bir ağ IP adresine sahip olmasalar bile boşta kalan elektronik cihazları kullanarak evde Web3 ağına katılabilir. Geliştirme için ev bant genişliği gerektiren gelecekteki teknolojiler, GaGa Düğümü aracılığıyla gerçek ev bant genişliği kaynakları elde edebilir.
 GaGaNode’ları çalıştırmanın avantajları nelerdir? GaGaNode Kredileri kazanmak bir Android telefon, tvbox, Raspberry Pi, veya bir bilgisayar kullanılabilir....</p></div><footer class=entry-footer><span title='2022-12-14 11:30:03 +0000 +0000'>Aralık 14, 2022</span>&nbsp;·&nbsp;2 dk&nbsp;·&nbsp;357 words&nbsp;·&nbsp;Nijat</footer><a class=entry-link aria-label="post link to GaGaNode Nedir, Nasıl Kurulur - Android, Windows, Linux Hızlı Kurulum Kılavuzu" href=https://nijatoes.com/tr/posts/tr/gaganode-nedir-nasil-kurulur/></a></article></main><footer class=footer><span>&copy; 2022 <a href=https://nijatoes.com/tr/>Nijatoes - Türkçe Blog</a></span>
 <span>Powered by
 <a href=https://meson.network/ rel="noopener noreferrer" target=_blank>Meson</a>,
