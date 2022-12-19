@@ -42,6 +42,7 @@ Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:
 
 2.İstifadəçiyə sudo icazəsi vermək
 > ```usermod -aG sudo <user>```
+> ```passwd <user>```
 
 3.SSH key yaradılması
 > RSA ```ssh-keygen```
@@ -76,4 +77,14 @@ Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:
 
 > ```-A --ufw-before-input -p --icmp-type echo-request -j DROP```
 
+9.Fail2Ban
+> ```sudo apt install fail2ban```
+> ```sudo nano /etc/fail2ban/jail.d/webmin.conf```
+> ```[webmin-auth]
+enabled = true
+port    = <port>
+filter  = webmin-auth
+logpath  = /var/log/auth.log
+maxretry = 3
+bantime = 120```
 > ```sudo reboot```
