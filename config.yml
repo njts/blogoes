@@ -1,4 +1,4 @@
-baseURL: "https://nijatoes.com/"
+baseURL: "https://ntmv.net/"
 title: Nijatoes - Blog
 paginate: 5
 theme: PaperMod
@@ -51,7 +51,7 @@ params:
     safari_pinned_tab: "/ico/apple-icon-152x152.png"
 
   label:
-    text: "Nijatoes"
+    text: "NTMV"
     icon: /other/Axe_001.png
     iconHeight: 50
 
@@ -72,21 +72,14 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: This blog is an archive of my experiences on some different subjects
+    Title: "&#127965;&#65039; A Cyber Island Inhabited by a Cyber Survivor"
+    Content: Welcome to my island, where occasionally spill the cyber-tea on all things decentralized networks, distributed systems, and cybersecurity.
 
   socialIcons:
     - name: twitter
       url: "https://twitter.com/nijatoes"
     - name: youtube
       url: "https://www.youtube.com/channel/UCjiHQiwnE2Bn0hCy8IMiw-Q"
-  analytics:
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
 
   cover:
     hidden: false # hide everywhere but not in structured data
