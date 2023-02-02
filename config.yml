@@ -108,7 +108,7 @@ menu:
       url: https://t.me/blogoes
       weight: 12
     - identifier: rp
-      name: Repost?
+      name: Content Lisence
       url: /license/
       weight: 11
     - identifier: videos
