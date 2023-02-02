@@ -25,4 +25,6 @@ UseHugoToc: true
 cover:
     
 ---
-### I believe people should be able to find educational materials easily, share them freely with others, and reuse them as needed, without any paywalls or barriers. The content you read on this website is either my original writing or derived from my personal notes that I take while working or learning. All of my writing and posts on this blog are publicly accessible. You can freely use my articles for any good purpose under the [`CC BY-ND 4.0`](https://creativecommons.org/licenses/by-nd/4.0/) license.
+#### I believe people should be able to find educational materials easily, share them freely with others, and reuse them as needed, without any paywalls or barriers. 
+
+#### The content you read on this website is either my original writing or derived from my personal notes that I take while working or learning. All of my writing and posts on this blog are publicly accessible. You can freely use my articles for any good purpose under the [`CC BY-ND 4.0`](https://creativecommons.org/licenses/by-nd/4.0/) license. 
