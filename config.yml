@@ -63,7 +63,7 @@ params:
     imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: axe
     buttons:
       - name: Posts
         url: posts
@@ -139,9 +139,9 @@ languages:
   tr:
     contentDir: content/posts/tr
     languageName: Turkish
-    title: Nijatoes - Türkçe Blog
+    title: NTMV - TR
     weight: 2
   en:
     languageName: English
-    title: Nijatoes - Blog
+    title: NTMV
     weight: 1
