@@ -1,5 +1,5 @@
 baseURL: "https://ntmv.net/"
-title: Nijatoes - Blog
+title: A Cyber Island Inhabited by a Cyber Survivor
 paginate: 5
 theme: PaperMod
 
@@ -16,9 +16,9 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: 🪓
-  description: "This blog is an archive of my experiences on some different subjects"
+  description: "Nijat's Cyber Island"
   keywords: [Web3, Cloud, Back-end]
-  author: Nijatoes
+  author: Nijat
   # author: ["Me", "You"] # multiple authors
   images: ["/cover/twitter-cover.jpg"]
   DateFormat: "January 2, 2006"
@@ -73,7 +73,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "&#127965;&#65039; A Cyber Island Inhabited by a Cyber Survivor"
-    Content: Welcome to my island, where occasionally spill the cyber-tea on all things decentralized networks, distributed systems, and cybersecurity.
+    Content: Welcome to my island, where I occasionally spill the cyber-tea on all things decentralized networks, distributed systems, and cybersecurity.
 
   socialIcons:
     - name: twitter
