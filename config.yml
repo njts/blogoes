@@ -180,7 +180,7 @@ languages:
         title: NTMV - TR
         homeInfoParams:
             Title: "&#127965;&#65039; Tek Kişilik Bir Siber Ada"
-            Content: Adaya hoş geldiniz. Burada bazen merkeziyyetsiz teknolojiler ve siber güvenlik ile ilgili küçük yazılarımı paylaşıyorum.
+            Content: Adaya hoşgeldiniz. Burada zaman zaman merkeziyetsiz teknolojiler ve siber güvenlik ile ilgili yazılarımı paylaşıyorum.
         taxonomies:
           category: FAcategories
           tag: FAtags
