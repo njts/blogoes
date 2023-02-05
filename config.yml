@@ -1,7 +1,7 @@
 baseURL: "https://ntmv.net/"
 title: A Cyber Island Inhabited by a Cyber Survivor
 paginate: 5
-theme: PaperMod
+theme: PaperMod2Plus
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -12,6 +12,12 @@ buildExpired: false
 minify:
   disableXML: true
   minifyOutput: true
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -101,16 +107,19 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
+  customapis:
+    tvapURL: "https://tvap.nijatoes.com/visitors"
+    plausibleURL: "https://app.axshelf.com/app.js"
+    statDomain: "nijatoes.com"
+    statusPage: "https://status.nijatoes.com/status/live"
+
 menu:
   main:
-    - identifier: telegram
-      name: Tg
-      url: https://t.me/blogoes
-      weight: 12
     - identifier: rp
-      name: Content Lisence
+      name: Content license
       url: /license/
-      weight: 11
+      weight: 9
     - identifier: videos
       name: Videos
       url: /videos/
@@ -119,10 +128,11 @@ menu:
       name: Github
       url: https://github.com/njts/blogoes/
       weight: 10
-    - identifier: Contact
+    - identifier: contact
       name: Contact
-      url: mailto:hello@nijatoes.com?subject=nijatoes.com
+      url: /contact/
       weight: 8
+
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -136,12 +146,78 @@ markup:
     # style: monokai
 
 languages:
-  tr:
-    contentDir: content/posts/tr
-    languageName: Turkish
-    title: NTMV - TR
-    weight: 2
-  en:
-    languageName: English
-    title: NTMV
-    weight: 1
+    en:
+        languageName: "English"
+        weight: 1
+        title: NTMV
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - identifier: rp
+                  name: Content license
+                  url: /license/
+                  weight: 4
+                - identifier: videos
+                  name: Videos
+                  url: /videos/
+                  weight: 3
+                - identifier: github
+                  name: Github
+                  url: https://github.com/njts/blogoes/
+                  weight: 5
+                - identifier: contact
+                  name: Contact
+                  url: /contact/
+                  weight: 1
+
+    tr:
+        contentDir: content/posts/tr
+        languageName: Turkish
+        weight: 2
+        title: NTMV - TR
+        homeInfoParams:
+            Title: "&#127965;&#65039; Tek Kişilik Bir Siber Ada"
+            Content: Adaya hoş geldiniz. Burada bazen merkeziyyetsiz teknolojiler ve siber güvenlik ile ilgili küçük yazılarımı paylaşıyorum.
+        taxonomies:
+          category: FAcategories
+          tag: FAtags
+          series: FAseries
+        menu:
+            main:
+                - identifier: rp
+                  name: İçerik lisansı
+                  url: /license/
+                  weight: 4
+                - identifier: videos
+                  name: Videolar
+                  url: /videos/
+                  weight: 3
+                - identifier: github
+                  name: Github
+                  url: https://github.com/njts/blogoes/
+                  weight: 5
+                - identifier: contact
+                  name: İletişim
+                  url: /contact/
+                  weight: 1
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
