@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: "İletişim"
 date: 2022-07-16T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
@@ -31,10 +31,10 @@ cover:
 
 - Fingerprint: 9893AB87CA2B7DF582D0F6B08CD527E95DF52A1E
 
-- Download URL: [ntmv.gpg](/key/ntmv.gpg)
+- İndirme bağlantısı: [ntmv.gpg](/key/ntmv.gpg)
 
 ```
 curl -sL https://ntmv.net/keys/ntmv.gpg | gpg --import
 ```
 
-Make sure all emails from me have my digital signature on them
+Benden gelen tüm e-postalarda dijital imzamın bulunduğundan emin ol

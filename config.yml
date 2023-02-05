@@ -10,8 +10,8 @@ buildExpired: false
 
 
 minify:
-  disableXML: true
-  minifyOutput: true
+  disableXML: false
+  # minifyOutput: false
 
 outputs:
     home:
@@ -28,9 +28,8 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["/cover/twitter-cover.jpg"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark # dark, light
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -38,6 +37,7 @@ params:
   ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -60,26 +60,6 @@ params:
     text: "NTMV"
     icon: /other/Axe_001.png
     iconHeight: 50
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: 🪓
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: axe
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "&#127965;&#65039; A Cyber Island Inhabited by a Cyber Survivor"
-    Content: Welcome to my island, where I occasionally spill the cyber-tea on all things decentralized networks, distributed systems, and cybersecurity.
 
   socialIcons:
     - name: twitter
@@ -114,25 +94,6 @@ params:
     statDomain: "nijatoes.com"
     statusPage: "https://status.nijatoes.com/status/live"
 
-menu:
-  main:
-    - identifier: rp
-      name: Content license
-      url: /license/
-      weight: 9
-    - identifier: videos
-      name: Videos
-      url: /videos/
-      weight: 9
-    - identifier: github
-      name: Github
-      url: https://github.com/njts/blogoes/
-      weight: 10
-    - identifier: contact
-      name: Contact
-      url: /contact/
-      weight: 8
-
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -150,6 +111,9 @@ languages:
         languageName: "English"
         weight: 1
         title: NTMV
+        homeInfoParams:
+            Title: "&#127965;&#65039; A Cyber Island Inhabited by a Cyber Survivor"
+            Content: Welcome to my island, where I occasionally spill the cyber-tea on all things decentralized networks, distributed systems, and cybersecurity.
         taxonomies:
           category: categories
           tag: tags
@@ -160,10 +124,6 @@ languages:
                   name: Content license
                   url: /license/
                   weight: 4
-                - identifier: videos
-                  name: Videos
-                  url: /videos/
-                  weight: 3
                 - identifier: github
                   name: Github
                   url: https://github.com/njts/blogoes/
@@ -172,6 +132,10 @@ languages:
                   name: Contact
                   url: /contact/
                   weight: 1
+                - identifier: search
+                  name: Search
+                  url: /search/
+                  weight: 6
 
     tr:
         contentDir: content/posts/tr
@@ -203,6 +167,10 @@ languages:
                   name: İletişim
                   url: /contact/
                   weight: 1
+                - identifier: search
+                  name: Ara
+                  url: /search/
+                  weight: 6
 
 privacy:
     vimeo:
