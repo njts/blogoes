@@ -68,7 +68,7 @@ params:
       url: "https://www.youtube.com/channel/UCjiHQiwnE2Bn0hCy8IMiw-Q"
     - name: Rss
       url: "index.xml"
-      
+
   cover:
     hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
@@ -94,7 +94,7 @@ params:
     tvapURL: "https://tvap.nijatoes.com/visitors"
     plausibleURL: "https://app.axshelf.com/app.js"
     statDomain: "nijatoes.com"
-    statusPage: "https://status.nijatoes.com/status/live"
+    statusPage: "https://ntmv-status.fly.dev/status/1"
 
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
