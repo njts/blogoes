@@ -9,7 +9,7 @@ TocOpen: true
 draft: false
 hidemeta: true
 comments: false
-description: "What is the purpose of this blog? What tech stack am I using for this website?"
+description: "What is the purpose of this blog? What tech stack do I use for this website?"
 # canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: true
