@@ -22,13 +22,12 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-
 editPost:
     URL: "https://github.com/njts/blogoes/blob/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-### Posts
+### Posts.
 I usually have to do a lot of research when working on web development and cybersecurity tasks. Sometimes I find the information I'm looking for in the comments section of a website or on a personal blog, which saves me a lot of time. 
 That's why I just openly share my own experiences, code snippets, and some notes here. I believe that some of the information I share will benefit someone and make their job easier. I don't put ads, paywalls, or other forms of monetization on my content. I don't create long, meaningless SEO content. I just post what I know, what I did to accomplish a certain thing, and what I'm thinking about something. 
 

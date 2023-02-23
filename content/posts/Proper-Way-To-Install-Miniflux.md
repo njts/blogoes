@@ -35,7 +35,7 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-### What is Miniflux
+### What is Miniflux?
 [Miniflux](https://miniflux.app) is my favorite RSS reader. I enjoy using it. Recently, I attempted to install the latest miniflux reader without Docker and encountered some difficulties. Installation with Docker is straightforward, but it may be necessary to install without Docker in some cases. When I looked for resources to help me solve the problems I encountered during the installation, I found no proper online installation guide. As a result, I decided to create one. So here is it. Easy, simple Miniflux installation guide
 
 ### Before start installing the app, update the host
@@ -47,7 +47,7 @@ sudo apt update && sudo apt upgrade -y
 echo "deb [trusted=yes] https://repo.miniflux.app/apt/ /" | sudo tee /etc/apt/sources.list.d/miniflux.list > /dev/null
 sudo apt update
 ```
-### Install miniflux and other necesarry components
+### Install miniflux and other necessary components
 ```
 sudo apt install miniflux postgresql libpq5 postgresql postgresql-client postgresql-client-common postgresql-contrib
 ```
