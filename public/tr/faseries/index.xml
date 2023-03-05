@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FAseries on NTMV - TR</title>
     <link>https://ntmv.net/tr/faseries/</link>
     <description>Recent content in FAseries on NTMV - TR</description>
-    <image>
-      <title>NTMV - TR</title>
-      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
-      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://ntmv.net/tr/faseries/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>web3 on NTMV</title>
     <link>https://ntmv.net/tags/web3/</link>
     <description>Recent content in web3 on NTMV</description>
-    <image>
-      <title>NTMV</title>
-      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
-      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 14 Dec 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/web3/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -17,98 +12,8 @@
       <pubDate>Wed, 14 Dec 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/what-is-gaganode-and-how-to-run-in-on-mobile/</guid>
-      <description>GaGaNode Quick-Start Guide for Mobile, Desktop and Linux Devices</description>
-      <content:encoded><![CDATA[<h3 id="what-is-gaganode">What is gaganode?</h3>
-<p>GaGaNode is a Decentralized Residential IP + Bandwidth Marketplace. With Web3.0 technology, it aims to alleviate the global shortage of IPv4 addresses. Users can participate in the Web3 network at home using Idle Electronics even if they do not have a public network IP address. Future technologies that require home bandwidth for development can obtain real home bandwidth resources via GaGa Node.</p>
-<h3 id="what-are-the-advantages-of-running-gaganodes">What are the advantages of running GaGaNodes?</h3>
-<p>To earn GaGaNode Credits, you simply need an idle Android phone, as well as a tvbox, Raspberry Pi, computer, or other electrical equipment.
-Users do not need to invest in additional mining machines; instead, they simply donate their home broadband resources to earn GaGaNode Credits.</p>
-<h3 id="lets-start">Let&rsquo;s start</h3>
-<h3 id="before-you-start-you-need-to-register-herehttpsoutnijatoescomgaganode-register-and-create-a-gaganode-account">Before you start, you need to register <a href="https://out.nijatoes.com/GaGaNode-register">HERE</a> and create a GaGaNode account.</h3>
-<ul>
-<li><a href="https://out.nijatoes.com/GaGaNode-register">https://out.nijatoes.com/GaGaNode-register</a></li>
-</ul>
-<p><img loading="lazy" src="/img/screenshot.png" alt=""  />
-</p>
-<h2 id="runnig-gaganode-on-android-phone">Runnig GaGaNode on Android phone</h2>
-<ul>
-<li>Download and Install <a href="https://assets.coreservice.io/public/package/32/gaganode/1.0.3/gaganode-1_0_3.apk">GaGaNode</a> android app</li>
-</ul>
-<blockquote>
-<p>Copy your token
-<img loading="lazy" src="/img/install_run.c4bd2c82.png" alt=""  />
-</p>
-</blockquote>
-<blockquote>
-<p>Start android app and enter your token
-<img loading="lazy" src="/img/android-03.5ff0f04c.jpeg" alt=""  />
-</p>
-</blockquote>
-<h3 id="enable-auto-starting">Enable Auto-starting</h3>
-<blockquote>
-<p>Set &lsquo;No restrictions&rsquo; when start.
-<img loading="lazy" src="/img/android-01.cbbe2b89.png" alt=""  />
-</p>
-</blockquote>
-<blockquote>
-<p>Enable Autostart.
-<img loading="lazy" src="/img/android-02.47e56405.png" alt=""  />
-</p>
-</blockquote>
-<h2 id="runnig-gaganode-on-windows-pc">Runnig GaGaNode on Windows PC</h2>
-<h3 id="open-powershell-in-windows">Open PowerShell in Windows</h3>
-<ul>
-<li>Use the “Run” window to open PowerShell
-You can open Windows PowerShell with administrator privileges from Run. A quick way to launch this window is to press the <code>Win</code> + <code>R</code> keys on the keyboard. Then, type <code>powershell</code> and press Enter or click OK.</li>
-</ul>
-<p><img loading="lazy" src="/img/windows-03.c050e0c7.png" alt=""  />
-</p>
-<p>Switch from PowerShell to PowerShell Admin. If you’re already working in PowerShell but you need to switch over to <code>admin</code> mode, you can do so without closing PowerShell. Just run this command:</p>
-<pre tabindex="0"><code>start-process powershell -verb runas
-</code></pre><p><img loading="lazy" src="/img/windows-04.6eb30a24.png" alt=""  />
-</p>
-<h4 id="1download--install">1.Download &amp; Install</h4>
-<pre tabindex="0"><code>wget -Uri &#34;https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz&#34; -OutFile &#34;app-windows-amd64.tar.gz&#34; ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install
-</code></pre><h4 id="2start-service">2.Start Service</h4>
-<pre tabindex="0"><code>./app.exe service start
-</code></pre><h4 id="3set-token">3.Set Token</h4>
-<pre tabindex="0"><code>./apps/gaganode/gaganode.exe config set --token=your_token_here
-</code></pre><h4 id="4restart-app">4.Restart APP</h4>
-<pre tabindex="0"><code>./app.exe restart
-</code></pre><h4 id="5check-app-status">5.Check APP Status</h4>
-<pre tabindex="0"><code>./app.exe status
-</code></pre><blockquote>
-<p>After 1-3 minutes, you will have a new terminal record at terminals open in new node.
-<img loading="lazy" src="/img/windows-06.0d8b27e5.png" alt=""  />
-</p>
-</blockquote>
-<h2 id="runnig-gaganode-on-linux-vps-and-desktops">Runnig GaGaNode on Linux VPS and Desktops</h2>
-<h3 id="install-dependencies-packages">Install Dependencies Packages</h3>
-<pre tabindex="0"><code>sudo apt-get update -y &amp;&amp; sudo apt-get -y install curl tar ca-certificates
-</code></pre><h4 id="1download--install-1">1.Download &amp; Install</h4>
-<pre tabindex="0"><code>curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz &amp;&amp; tar -zxf app-linux-amd64.tar.gz &amp;&amp; rm -f app-linux-amd64.tar.gz &amp;&amp; cd ./app-linux-amd64 &amp;&amp; sudo ./app service install
-</code></pre><h4 id="2start-service-1">2.Start Service</h4>
-<pre tabindex="0"><code>sudo ./app service start
-</code></pre><h4 id="3check-app-status">3.Check APP Status</h4>
-<pre tabindex="0"><code>./app status
-</code></pre><p>console output:</p>
-<blockquote>
-<p><code>meson@meson-server:~/app-linux-amd64$ ./app status [gaganode]:		local version:[1.0.3] latest version:[1.0.3] status:[DOWNLOADED]</code></p>
-</blockquote>
-<h4 id="4set-token">4.Set Token</h4>
-<pre tabindex="0"><code>sudo ./apps/gaganode/gaganode config set --token=your_token_here
-</code></pre><h4 id="5restart-app">5.Restart APP</h4>
-<pre tabindex="0"><code>./app restart
-</code></pre><blockquote>
-<h3 id="terminal-recording">Terminal Recording</h3>
-</blockquote>
-<p><a href="https://asciinema.org/a/545183"><img loading="lazy" src="https://asciinema.org/a/545183.svg" alt="asciicast"  />
-</a></p>
-<blockquote>
-<h3 id="notice">Notice:</h3>
-<p>This article is a summary of the <a href="https://docs.gaganode.com/">official documentation</a>. I strongly recommend looking through the official documentation for more in-depth information and installation instructions</p>
-</blockquote>
-]]></content:encoded>
+      <description>What is gaganode? GaGaNode is a Decentralized Residential IP + Bandwidth Marketplace. With Web3.0 technology, it aims to alleviate the global shortage of IPv4 addresses. Users can participate in the Web3 network at home using Idle Electronics even if they do not have a public network IP address. Future technologies that require home bandwidth for development can obtain real home bandwidth resources via GaGa Node.
+What are the advantages of running GaGaNodes?</description>
     </item>
     
     <item>
@@ -117,96 +22,7 @@ You can open Windows PowerShell with administrator privileges from Run. A quick 
       <pubDate>Thu, 01 Sep 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</guid>
-      <description>In this article, I explain why open service subdaos are very sound idea</description>
-      <content:encoded><![CDATA[<p>When it comes to the decentralized web, decentralization has always been a source of contention. Some believe that the decentralized web is truly decentralized, while others believe that it is unrealistic. To be honest, I believe in second thoughts as well. One of the primary reasons for this is that decentralized web infrastructure continues to rely heavily on centralized infrastructure. Many DAPPs are still hosted on servers provided by major cloud providers such as Amazon and Google, as I mentioned in my previous article.</p>
-<p>I saw <a href="https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md">HIP 68</a> recommended on Helium&rsquo;s Github a while ago, and it inspired me to write this article. There was a section in HIP 68 that suggested running the Meson Network CDN nodes on Helium hotspots. I&rsquo;ll explain why, this is a very sound idea.</p>
-<blockquote>
-<p>Note 1: All opinions expressed in this article are my personal opinions. I&rsquo;d like to state right away that this article is also about missing pieces of some Web3 projects. But that doesn&rsquo;t mean I don&rsquo;t like them. I support and appreciate every project working to decentralize the internet. I believe they will overcome the issues mentioned here.</p>
-</blockquote>
-<p>Let&rsquo;s get started.</p>
-<h3 id="why-helium">Why Helium?</h3>
-<p>Why does integrating Meson into the Helium network make more sense when there are such good and decentralized server/node infrastructure examples like Akash and Flux available today?</p>
-<p>The two biggest players in the decentralized cloud industry are Akash and Flux. They&rsquo;re doing an excellent job of developing the decentralized clouds. However, there are some parts that I believe are missing. They have a long way to go in terms of distribution, despite how good they are at decentralization.</p>
-<p><img loading="lazy" src="/img/flux-providers.jpg" alt="Flux Providers"  />
-</p>
-<p>There are three basic types of providers in Akash and Flux.</p>
-<h4 id="data-centers">Data centers</h4>
-<p>As their names indicate, data centers that provide the basic processing power are not much different from the data centers we are accustomed to.</p>
-<h4 id="secondary-market-vendors">Secondary market vendors</h4>
-<p>Secondary market vendors are users who sell computing power from major central cloud providers such as AWS, GCP, and Hetzner on Akash and Flux. While the processing power still comes from large central data centers, it is more decentralized as it is provided by a large number of users.</p>
-<h4 id="home-providers">Home providers</h4>
-<p>It is the rarest but most valuable type of user. Home users contribute to the network with the servers they host in their own homes and play a major role in the decentralization of the network.</p>
-<p>The first two types of providers provide the majority of the processing power in decentralized clouds. As far as I can see, Akash is currently working to increase home providers. One of these works was the Akash Supermini device. The Supermini can be thought of as a home server. This was a great idea, but unfortunately it&rsquo;s been postponed for now.</p>
-<p><img loading="lazy" src="/img/akash-supermini.webp" alt="supermini"  />
-</p>
-<p>Furthermore, these two decentralized cloud providers can only run Docker containers and do not offer IPv4 or IPv6 addresses.</p>
-<h3 id="what-makes-helium-unique">What makes Helium unique?</h3>
-<p>Helium is inherently distributed. It&rsquo;s not a good idea to put together and run a bunch of helium hotspot miners in one room. Each Helium hotspot must be at least 300 feet apart from the others. This ensures complete dispersion. As a result, the Helium Network has the potential to create sub-networks that operate in highly distributed networks.</p>
-<p><img loading="lazy" src="/img/helium-map.png" alt="Helium Map"  />
-</p>
-<h3 id="what-types-of-sub-networks-are-possible">What types of sub-networks are possible?</h3>
-<p>VPN, CDN, ping server and other sub-networks that require less processing power can be created.
-For the rest of this article, I&rsquo;ll go over the Meson CDN example. Meson CDN is a promising project that aims to build a decentralized CDN for Web 3.0.</p>
-<h3 id="what-are-the-advantages-of-running-the-meson-cdn-on-helium-nodes-for-the-helium-network">What are the advantages of running the Meson CDN on Helium nodes for the Helium network?</h3>
-<h4 id="1-it-has-the-potential-to-reduce-the-number-of-offline-hotspots-in-the-helium-network">1. It has the potential to reduce the number of offline hotspots in the Helium network.</h4>
-<p>At the moment, 35% of the Helium network&rsquo;s total hotspots are offline, and this figure is increasing by the day. Low hotspot earnings are one of the main reasons for such a high offline hotspot rate. Some hotspots&rsquo; earnings no longer motivate people to operate them. One of the most significant benefits of Meson Network is that it will strengthen the revenue model for Helium hotspot owners. People who run Meson CDN on their hotspots will be able to earn extra HNT. Furthermore, Meson CDN will increase overall data credit utilization in the helium network. This will help in keeping more hotspots online. On the other hand, Meson CDN nodes consume very few resources on the host machine, which means they can run on any hotspot.</p>
-<h4 id="2-meson-can-improve-the-performance-of-the-5g-network">2. Meson can improve the performance of the 5G network.</h4>
-<p>Helium strives to become one of the biggest players in the global 5G market. At the time of writing this article, there are 2644 5G hotspots connected to the network, and it continues to increase every day.</p>
-<p>If Meson CDN nodes are installed in these hotspots, users connecting to the internet using Helium 5G can achieve faster web performance than 5G provided by other traditional mobile providers. Of course, this performance increase will be valid for websites where Meson CDN is used, but considering that Meson has the potential to become one of the largest CDNs in the world, this is not a big problem.</p>
-<h3 id="how-it-will-improve-the-performance-of-the-5g-network">How it will improve the performance of the 5G network?</h3>
-<p>Hotspots/modems are the first points of contact between the user and the destination server. Furthermore, these are the closest possible points to install CDN servers. Traditional CDN providers are unable to easily install CDN servers at these points. If Helium and Meson collaborate to accomplish this, it may start a new era in the CDN and 5G industries.</p>
-<blockquote>
-<p>Server-side caching
-<img loading="lazy" src="/img/server-side-cache.jpg" alt="server-side"  />
-</p>
-</blockquote>
-<blockquote>
-<p>Traditional CDNs
-<img loading="lazy" src="/img/traditional.jpg" alt="Traditional CDNs"  />
-</p>
-</blockquote>
-<blockquote>
-<p>Meson + Helium 5G
-<img loading="lazy" src="/img/meson-helium5g.jpg" alt="Meson &#43; Helium 5G"  />
-</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Costs</th>
-<th>Server load</th>
-<th>Latency</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Server-side</td>
-<td>High</td>
-<td>High</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Traditional CDNs</td>
-<td>Low</td>
-<td>Low</td>
-<td>Median</td>
-</tr>
-<tr>
-<td>Meson + Helium 5G</td>
-<td>Low</td>
-<td>Low</td>
-<td>Low</td>
-</tr>
-</tbody>
-</table>
-<p>In this day and age, using server-side caching is something I think you should only use if you&rsquo;re also high. I know, your latest and greatest WordPress server-side caching plugin functions like a magic.
-Hovever, this method has repeatedly been shown to be ineffective when subjected to high loads. You&rsquo;ll need an offsite cache solution.</p>
-<h4 id="3-in-5g-hotspots-it-economizes-bandwidth-coming-from-outside-to-the-hotspot">3. In 5G hotspots, it economizes bandwidth coming from outside to the hotspot.</h4>
-<p>When a user connects to the internet via Helium 5G hotspot and logs into a website that uses Meson CDN, if the hotspot is running a Meson CDN node, the hotspot can use its own local cache instead of requesting data from another server each time. In this way, that hotspot can save the internet bandwidth it spends requesting data from servers around the world</p>
-<p>I have covered the three most important topics above. Of course, there are other topics to consider.  The most important of these is interoperability.  Instead of each project working separately, if they collaborate and develop compatible software with each other, they can accelerate web3 adoption and provide a better environment for developers and users. Only by considering the web 3.0 as a whole can we produce something useful. Despite the fact that we all work on different projects and follow different paths, our ultimate goal is the same. A better Internet for a brighter future.
-If you have something to say or discuss about it, you can write it under this Twitter post. I&rsquo;m curious about your thoughts too. I have not activated the comment feature here. Let&rsquo;s run like this for a while)</p>
-]]></content:encoded>
+      <description>When it comes to the decentralized web, decentralization has always been a source of contention. Some believe that the decentralized web is truly decentralized, while others believe that it is unrealistic. To be honest, I believe in second thoughts as well. One of the primary reasons for this is that decentralized web infrastructure continues to rely heavily on centralized infrastructure. Many DAPPs are still hosted on servers provided by major cloud providers such as Amazon and Google, as I mentioned in my previous article.</description>
     </item>
     
     <item>
@@ -215,85 +31,7 @@ If you have something to say or discuss about it, you can write it under this Tw
       <pubDate>Sat, 16 Jul 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/my-thoughts-and-experiences-on-meson-decentralized-cdn-network/</guid>
-      <description>This is my first blog post on my decentralized blog and it is about the decentralized web:)</description>
-      <content:encoded><![CDATA[<p>The Web is going to be decentralized. Must be. Wait, what do we need to achieve a fully decentralized future? Of course, decentralized computing and edge infrastructure. When we&rsquo;re talking about Web3, there is always a silent moment for backend infrastructures. Most dapps, swaps, and even nft marketplace websites are running on big corporation-owned centralized datacenters like AWS, Google, and Azure/Microsoft. </p>
-<p><a href="https://meson.network">Meson</a> is a blockchain project working to fill part of that gap. Meson is a decentralized CDN run by people for people. It already has 30k+ edge nodes worldwide so far.
-I&rsquo;m also running over 108 Meson 3.0 servers/nodes in 17 counties and 27 different cities worldwide.</p>
-<p><img loading="lazy" src="/img/map-1.png" alt="map-1"  />
-</p>
-<p>My total effective bandwidth is ~71 Gbps.
-It&rsquo;s inspiring to be a part of this amazing network. My next article will be about installing nodes for Meson Network and my experiences as a node runner. Wait for it.</p>
-<p>Meson Network has two different CDNs. Meson 3.0 and m-cdn. M-cdn is a hybrid multi-cdn that uses a lot of third-party CDN services. Meson 3.0 is what I was looking for. It is a truly decentralized CDN with 30K nodes globally. So I decided to do some tests with it.</p>
-<p>First of all, I&rsquo;ve spun up a VM with an NGINX server. Later, I created a simple web page by forking <a href="https://codepen.io/suez/pen/ZEqxBb">this</a> codepen repo. Uploaded to server. Now we have a running website. Let&rsquo;s connect it to Meson.</p>
-<h3 id="starting-with-meson-30">Starting with Meson 3.0</h3>
-<p>Meson&rsquo;s dashboard has a user-friendly and easy-to-understand UI.
-First, go to your DNS provider&rsquo;s dashboard, and create an A-record that points to your web server. Later, open dashboard.meson.network, create an account, &gt; pull zones, &gt; create pull zone.</p>
-<p><img loading="lazy" src="/img/meson-dash.png" alt="meson-dash"  />
-</p>
-<p>Enter your domain name without https. You can start using Meson for free. There is a $5 credit for new users. Give it a <a href="https://dashboard.meson.network">try</a>.
- </p>
-<h3 id="my-testing-and-comparisons">My testing and comparisons</h3>
-<p>First, I&rsquo;ve tried to connect my website directly to see what the end point is. Cdn redirected me to a URL. I found an IP in my country after pinging that URL&rsquo;s sub-domain. 
-Then I noticed that the IP belongs to one of my servers, which I&rsquo;m running for the Meson network. That was a fascinating moment.
-Then I also connected to another node&rsquo;s IP, which is run by my close friend. It&rsquo;s amazing.</p>
-<p><img loading="lazy" src="/img/browser-1.png" alt="browser-1"  />
-
-<img loading="lazy" src="/img/terminal-1.png" alt="terminal-1"  />
-
-<img loading="lazy" src="/img/nodes-1.png" alt="nodes-1"  />
-</p>
-<h3 id="test-2-coverage">Test 2: Coverage</h3>
-<p>I&rsquo;ve spun up 9 VMs in 7 different cities and sent a get request to <a href="https://pz-dzulrd.meson.network">https://pz-dzulrd.meson.network</a> to see where I will be redirected.
-Results👇
-<img loading="lazy" src="/img/multissh.png" alt="multissh"  />
-</p>
-<ul>
-<li>Paris 🇫🇷 (a1) - Paris 🇫🇷 (51.178.161.211)</li>
-<li>Seul 🇰🇷 (a10) - Seul 🇰🇷 (20.41.117.166)</li>
-<li>Sydney 🇦🇺 (a11) - Sydney 🇦🇺 (20.211.98.179)</li>
-<li>Hong Kong 🇭🇰 (a12) - Hong Kong 🇭🇰 (20.187.102.213)</li>
-<li>Hong Kong 2 🇭🇰 (a14) - Hong Kong 🇭🇰  (20.187.147. 38)</li>
-<li>Hong Kong 3 🇭🇰 (a16) - Hong Kong 🇭🇰  (20.187.147.38)</li>
-<li>Oslo 🇳🇴 (a13) - Oslo 🇳🇴  (51.13.112.214)</li>
-<li>Chennai 🇮🇳 (a15) - Pune 🇮🇳 (20.219.147.47)</li>
-<li>Virginia 🇺🇸 (a17) - Montreal 🇨🇦 (51.222.210.164)</li>
-</ul>
-<h3 id="test-3-gtmetrix-one-to-one-comparison">Test 3: Gtmetrix one-to-one comparison</h3>
-<p>I ran this test on two identical copies of this page. One copy is running on my single VPS, the other one is served by Meson Network. The results say everything. Meson is the clear winner.</p>
-<p><img loading="lazy" src="/img/compare-1.jpg" alt="compare-1"  />
-
-<a href="https://gtmetrix.com/compare/3ojoLI6g/azZfx8uM">Report link</a></p>
-<hr>
-<p>There is only one red column, and it&rsquo;s because of redirecting. I will explain how this problem can be solved with anycast shortly. </p>
-<p>As you saw, I didn&rsquo;t compare Meson with other CDN providers like Cloudflare, Bunnycdn, and Cloudfront because I don&rsquo;t think it&rsquo;s fair to compare them yet. However, I will when the time comes. At the end of the day, it works well.</p>
-<h3 id="stability">Stability</h3>
-<p>I did not encounter any performance issues during the period I tested. There were a few connection drops for some specific locations, for example, Hong Kong and Shenzen, but generally, I can say that Meson has reliable service. </p>
-<h3 id="pricing">Pricing</h3>
-<p>The pricing is really simple. $0.01/Gb.</p>
-<p>It&rsquo;s cheap compared to other alternatives. However, I think it will be a little cheaper in the future.
- </p>
-<h3 id="what-i-think-is-missing-in-this-project">What I think is missing in this project</h3>
-<p>I think they must build their own anycast network asap.</p>
-<p> 
-Anycast is a network addressing and routing methodology in which a single destination IP address is shared by devices in multiple locations. The nearest device responds to requests, giving end users access to fast service without the high latency issues that can be caused by traditional geo-location solutions. This reduces latency as well as packet loss rates because data can travel on routes that are optimized for speed and not just the shortest distance. </p>
-<blockquote>
-<p>Meson 3.0 current architecture
-<img loading="lazy" src="/img/meson-netw.png" alt="meson-netw"  />
-</p>
-</blockquote>
-<blockquote>
-<p>Anycast example (google.com architecture)
-<img loading="lazy" src="/img/google-anycast.png" alt="google-anycast"  />
-</p>
-</blockquote>
-<p>Anycast network will increase the CDN performance tremendously. They are currently using a single VM to share the network traffic. That VM might be powerful and well-located, but it&rsquo;s still a single point of failure. That&rsquo;s why I think anycast is so important in the future of Meson.
- </p>
-<h3 id="future">Future</h3>
-<p>Nobody knows what will happen in the future. But I think Meson Network can be the next Airbnb for the CDN industry.
- 
-Fun fact: This website is also powered by Meson and Akash.</p>
-<p>..Akash? Yes, my next post will be about it :)</p>
-]]></content:encoded>
+      <description>The Web is going to be decentralized. Must be. Wait, what do we need to achieve a fully decentralized future? Of course, decentralized computing and edge infrastructure. When we&amp;rsquo;re talking about Web3, there is always a silent moment for backend infrastructures. Most dapps, swaps, and even nft marketplace websites are running on big corporation-owned centralized datacenters like AWS, Google, and Azure/Microsoft. Meson is a blockchain project working to fill part of that gap.</description>
     </item>
     
   </channel>

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>web development on NTMV</title>
     <link>https://ntmv.net/tags/web-development/</link>
     <description>Recent content in web development on NTMV</description>
-    <image>
-      <title>NTMV</title>
-      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
-      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 18 Oct 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -17,131 +12,8 @@
       <pubDate>Tue, 18 Oct 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/wordpress-without-php/</guid>
-      <description>Easy-to-use of wordpress and speed of static website. In this short article, I explain how I serve my new Meson.guru Wordpress websites without PHP.</description>
-      <content:encoded><![CDATA[<h3 id="what-is-meson-guru">What is Meson Guru?</h3>
-<p>Meson.Guru is  a semi-automatic news aggregator for Meson Network. You can find all the latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.</p>
-<p><img loading="lazy" src="/img/mesonguru.png" alt="meson.guru"  />
-</p>
-<h3 id="backed">Backed</h3>
-<p>When the idea of creating such a website came to me, I decided to build my own little CMS with node.js. After writing the first hundred lines of code, I realized it wouldn&rsquo;t be as simple as I thought and decided to use one of the popular CMSs. I chose Wordpess because it provides numerous options and flexibility. But there was a problem. I don&rsquo;t like PHP. it&rsquo;s slow and outdated. You understand what I mean. Meanwhile, I decided to deliver this site to the end user without any PHP runtime. Clean and fresh.. 👌</p>
-<h3 id="how-it-works">How it works</h3>
-<p>WordPress 6.0 is installed on the internal network of my super private server. I&rsquo;m still building the website with Wordpress. I set up a few cron jobs with a five-minute interval loop. First cron job is for Simply Static plugin and GitHub pushes. Simply Static plugin generates a new static version of the wordpess generated website every five minutes and saves it to my super secret server&rsquo;s /static directory. Following that, the second github push code runs and uploads that static files to my Github repo, sends a telegram notification, chekcs the server state etc.
-That is all. Our website is now static.</p>
-<p><img loading="lazy" src="/img/archt.jpg" alt="backend"  />
-</p>
-<ul>
-<li>Auto static website build, github push and telegram notification</li>
-</ul>
-<pre tabindex="0"><code>#!/bin/bash
-start=`date +%s.%N`
-cpuload=$(top -bn1 | grep load | awk &#39;{printf &#34;%.2f%%\t\t\n&#34;, $(NF-2)}&#39;)
-ramload=$(free -m | awk &#39;NR==2{printf &#34;%.2f%%\t\t&#34;, $3*100/$2}&#39;)
-
-# Build static website
-cd /var/www/html
-wp cron event schedule simply_static_site_export_cron --allow-root
-wp cron event run --due-now --allow-root
-cd /var/www/static
-status=$(git diff --name-only)
-
-# Time stamp
-builddate() {
-  date +&#34;%Y/%m/%d %H:%M:%S&#34;
-}
-end=`date +%s.%N`
-buildtime=$( echo &#34;$end - $start&#34; | bc -l )
-echo &#34;$(builddate) buildTime ${buildtime}         cpuLoad: ${cpuload} ramLoad: ${ramload}&#34;  &gt;&gt; logs.txt
-sed -e &#39;s/\s\+/,/g&#39; logs.txt &gt; logs.csv
-
-# Github push
-git add .
-git commit -m &#34;$(builddate) UTC  auto commit&#34;
-git push -u origin main --force
-
-
-# Telegram notification
-/var/www/private-sripts/telegram-notf.sh &#34;
-|--------------changes-----------|
-${status}
-                       |
-|---------------system------------|
-| build time ${buildtime}
-| cpu load: ${cpuload}
-| ram load: ${ramload}
-                       |
-|------------build date----------|
-| $(builddate)
-|--------------------------------------|
-&#34;
-/var/www/static/custom-scripts/mem-check.sh
-responsetime=$(curl -H &#39;Cache-Control: no-cache, no-store&#39; -s -w &#39;\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n&#39; -o /dev/null &#34;https://meson.guru/?$(date +%s)&#34;)
-results=&#34;$(builddate) ${responsetime}&#34;
-echo ${results} &gt; responsetime.temp
-</code></pre><ul>
-<li>Telegram notification handler</li>
-</ul>
-<pre tabindex="0"><code>
-#!/bin/bash
-    
-GROUP_ID=&lt;group_id&gt;
-BOT_TOKEN=&lt;bot_token&gt;
-
-# this 3 checks (if) are not necessary but should be convenient
-if [ &#34;$1&#34; == &#34;-h&#34; ]; then
-  echo &#34;Usage: `basename $0` \&#34;text message\&#34;&#34;
-  exit 0
-fi
-
-if [ -z &#34;$1&#34; ]
-  then
-    echo &#34;Add message text as second arguments&#34;
-    exit 0
-fi
-
-if [ &#34;$#&#34; -ne 1 ]; then
-    echo &#34;You can pass only one argument. For string with spaces put it on quotes&#34;
-    exit 0
-fi
-
-curl -s --data &#34;text=$1&#34; --data &#34;chat_id=$GROUP_ID&#34; &#39;https://api.telegram.org/bot&#39;$BOT_TOKEN&#39;/sendMessage&#39; &gt; /dev/null
-</code></pre><p><img loading="lazy" src="/img/tg.png" alt="tg"  />
-</p>
-<ul>
-<li>Memory check</li>
-</ul>
-<pre tabindex="0"><code>#!/bin/bash
-
-memlimit=50000 # in KB
-
-# Reboot if memeory is lower than memory limit
-mem=$(cat /proc/meminfo | egrep &#34;^MemFree&#34; |awk &#39;{print $2}&#39;)
-if (( mem &lt;= $memlimit )); then
-/var/www/private-sripts/telegram-notf.sh &#34;Free memory is $(($mem/1024)) MB and it&#39;s lower than $(($memlimit/1024)) MB limit, so we restart the system&#34;
-/var/www/static/custom-scripts/reboot.sh
-else
-/var/www/private-sripts/telegram-notf.sh &#34;Memory is fine. $(($mem/1024)) MB is free&#34;
-fi
-</code></pre><ul>
-<li>Cron tab</li>
-</ul>
-<pre tabindex="0"><code>@reboot /var/www/static/custom-scripts/cron.sh
-*/5  * * * * tmux send-keys -t 0 &#34;/var/www/static/custom-scripts/auto-git.sh&#34; Enter
-0 */4 * * * /var/www/static/custom-scripts/reboot.sh
-55 23 * * * /var/www/private-sripts/tg-file.sh
-</code></pre><p>Full code is on <a href="https://github.com/njts/mesonguru">https://github.com/njts/mesonguru</a></p>
-<h3 id="public-hosting">Public hosting.</h3>
-<p>Now we need a hosting to host our static files. Most people will most likely consider Netlify as a solution for this. It&rsquo;s fast and free. However it doesn&rsquo;t fit in this situation. Netlify provides 300 minutes free build time each month. As I mentioned above, we rebuild meson.guru website every 5 minutes, and each rebuild takes about 10 seconds. A quick calculation reveals that we need approximately 1.4k minutes of build time each month. Extra 1000 minutes in Netlify cost about $14 per month.</p>
-<p>There are few cheap alternatives to host and deploy a static website. CDN store buckets like BunnyCDN, S3 free tier and self-hosted solutions.
-I like self-hosted solutions because I have more control over them. I chose <a href="https://coolify.io">Coolify</a> to host my website. Coolify is a self-hosted Heroku/Netlify alternative with a ton of great features. It has an auto deploy feature, so whenever my cron job pushes a new version of meson.guru to github, it will deploy the new versions automatically.</p>
-<p>I rented a VPS from Hetzer for $5 per month, installed Coolify on it, and used Coolify to deploy the static version of Meson.guru. It is less expensive than Netlify, and I can run a lot of other applications on the same vps.</p>
-<p><img loading="lazy" src="/img/coolify-1.png" alt="coolify"  />
-
-<img loading="lazy" src="/img/coolify-2.png" alt="coolify"  />
-</p>
-<p>This was also a fun experience. I learned a lot of new things and shared some of them with you.
-End of the day, this is my simple solution to serve WordPress websites without PHP runtime.</p>
-<p>Thanks for reading.</p>
-]]></content:encoded>
+      <description>What is Meson Guru? Meson.Guru is a semi-automatic news aggregator for Meson Network. You can find all the latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.
+Backed When the idea of creating such a website came to me, I decided to build my own little CMS with node.</description>
     </item>
     
   </channel>

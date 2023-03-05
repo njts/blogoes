@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FAQ on NTMV</title>
     <link>https://ntmv.net/tags/faq/</link>
     <description>Recent content in FAQ on NTMV</description>
-    <image>
-      <title>NTMV</title>
-      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
-      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 16 Jul 2022 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -18,29 +13,8 @@
       
       <guid>https://ntmv.net/contact/</guid>
       <description>Fingerprint: 9893AB87CA2B7DF582D0F6B08CD527E95DF52A1E
-Download URL: ntmv.gpg
-curl -sL https://ntmv.net/keys/ntmv.gpg | gpg --import Make sure all emails from me have my digital signature on them</description>
-      <content:encoded><![CDATA[<p><figure class="align-center ">
-    <img loading="lazy" src="/other/dm.svg#center"
-         alt="dwarf" width="150px"/> 
-</figure>
-
-<figure>
-    <img loading="lazy" src="/other/0000.png"
-         alt="dwarf" width="220px"/> 
-</figure>
-</p>
-<ul>
-<li>
-<p>Fingerprint: 9893AB87CA2B7DF582D0F6B08CD527E95DF52A1E</p>
-</li>
-<li>
-<p>Download URL: <a href="/key/ntmv.gpg">ntmv.gpg</a></p>
-</li>
-</ul>
-<pre tabindex="0"><code>curl -sL https://ntmv.net/keys/ntmv.gpg | gpg --import
-</code></pre><p>Make sure all emails from me have my digital signature on them</p>
-]]></content:encoded>
+  Download URL: ntmv.gpg
+  curl -sL https://ntmv.net/keys/ntmv.gpg | gpg --import Make sure all emails from me have my digital signature on them</description>
     </item>
     
     <item>
@@ -50,11 +24,16 @@ curl -sL https://ntmv.net/keys/ntmv.gpg | gpg --import Make sure all emails from
       
       <guid>https://ntmv.net/license/</guid>
       <description>I believe people should be able to find educational materials easily, share them freely with others, and reuse them as needed, without any paywalls or barriers. The content you read on this website is either my original writing or derived from my personal notes that I take while working or learning. All of my writing and posts on this blog are publicly accessible. You can freely use my articles for any good purpose under the CC BY-ND 4.</description>
-      <content:encoded><![CDATA[<h3 id="i-believe-people-should-be-able-to-find-educational-materials-easily-share-them-freely-with-others-and-reuse-them-as-needed-without-any-paywalls-or-barriers">I believe people should be able to find educational materials easily, share them freely with others, and reuse them as needed, without any paywalls or barriers.</h3>
-<h3 id="the-content-you-read-on-this-website-is-either-my-original-writing-or-derived-from-my-personal-notes-that-i-take-while-working-or-learning-all-of-my-writing-and-posts-on-this-blog-are-publicly-accessible-you-can-freely-use-my-articles-for-any-good-purpose-under-the-cc-by-nd-40httpscreativecommonsorglicensesby-nd40-license">The content you read on this website is either my original writing or derived from my personal notes that I take while working or learning. All of my writing and posts on this blog are publicly accessible. You can freely use my articles for any good purpose under the <a href="https://creativecommons.org/licenses/by-nd/4.0/"><code>CC BY-ND 4.0</code></a> license.</h3>
-]]></content:encoded>
     </item>
     
+    <item>
+      <title>Search</title>
+      <link>https://ntmv.net/search/</link>
+      <pubDate>Sat, 16 Jul 2022 11:30:03 +0000</pubDate>
+      
+      <guid>https://ntmv.net/search/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

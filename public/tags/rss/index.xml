@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rss on NTMV</title>
     <link>https://ntmv.net/tags/rss/</link>
     <description>Recent content in rss on NTMV</description>
-    <image>
-      <title>NTMV</title>
-      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
-      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Feb 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/rss/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -17,81 +12,7 @@
       <pubDate>Tue, 21 Feb 2023 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/proper-way-to-install-miniflux/</guid>
-      <description>How I Install Miniflux RSS reader without docker and docker-compose</description>
-      <content:encoded><![CDATA[<h3 id="what-is-miniflux">What is Miniflux?</h3>
-<p><a href="https://miniflux.app">Miniflux</a> is my favorite RSS reader. I enjoy using it. Recently, I attempted to install the latest miniflux reader without Docker and encountered some difficulties. Installation with Docker is straightforward, but it may be necessary to install without Docker in some cases. When I looked for resources to help me solve the problems I encountered during the installation, I found no proper online installation guide. As a result, I decided to create one. So here is it. Easy, simple Miniflux installation guide</p>
-<h3 id="before-start-installing-the-app-update-the-host">Before start installing the app, update the host</h3>
-<pre tabindex="0"><code>sudo apt update &amp;&amp; sudo apt upgrade -y
-</code></pre><h3 id="add-the-miniflux-repo">Add the miniflux repo</h3>
-<pre tabindex="0"><code>echo &#34;deb [trusted=yes] https://repo.miniflux.app/apt/ /&#34; | sudo tee /etc/apt/sources.list.d/miniflux.list &gt; /dev/null
-sudo apt update
-</code></pre><h3 id="install-miniflux-and-other-necessary-components">Install miniflux and other necessary components</h3>
-<pre tabindex="0"><code>sudo apt install miniflux postgresql libpq5 postgresql postgresql-client postgresql-client-common postgresql-contrib
-</code></pre><h3 id="create-a-database-for-miniflux">Create a database for miniflux</h3>
-<pre tabindex="0"><code>sudo -u postgres psql
-</code></pre><pre tabindex="0"><code>create database miniflux;
-</code></pre><pre tabindex="0"><code>create user miniflux with encrypted password &#39;miniflux&#39;;
-grant all privileges on database miniflux to miniflux;
-alter user miniflux with superuser;
-\q
-</code></pre><h3 id="edit-miniflux-config">Edit miniflux config</h3>
-<pre tabindex="0"><code>nano /etc/miniflux.conf
-</code></pre><pre tabindex="0"><code># /etc/miniflux.conf
-RUN_MIGRATIONS=1
-DATABASE_URL=user=miniflux password=miniflux dbname=miniflux sslmode=disable
-LISTEN_ADDR=/run/miniflux/miniflux.sock
-</code></pre><p>SQL migration and adding an admin user</p>
-<pre tabindex="0"><code>miniflux -c /etc/miniflux.conf -migrate &amp;&amp; miniflux -c /etc/miniflux.conf -create-admin
-</code></pre><h3 id="run-the-app">Run the app</h3>
-<pre tabindex="0"><code>miniflux -c /etc/miniflux.conf
-</code></pre><p>Press <code>Crtl+Z</code> to go back</p>
-<h3 id="install-nginx-and-certbot">Install nginx and certbot</h3>
-<pre tabindex="0"><code>sudo apt update
-sudo apt install nginx certbot python3-certbot-nginx -y
-</code></pre><pre tabindex="0"><code>sudo nano /etc/nginx/sites-available/miniflux
-</code></pre><h3 id="nginx-config-must-be-like-this">Nginx config must be like this</h3>
-<pre tabindex="0"><code># Change miniflux.example.com with your domain
-server {
-    server_name     miniflux.example.com;
-    listen          80;
-
-    location / {
-        proxy_pass  http://unix:/run/miniflux/miniflux.sock;
-        proxy_redirect off;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-</code></pre><h3 id="enable-the-config">Enable the config</h3>
-<pre tabindex="0"><code>sudo ln -s ../sites-available/miniflux /etc/nginx/sites-enabled/miniflux
-sudo certbot --non-interactive --redirect --agree-tos --nginx -d miniflux.example.com -m me@example.com
-</code></pre><h3 id="configure-systemd-service">Configure systemd service</h3>
-<pre tabindex="0"><code>sudo nano /etc/systemd/system/miniflux.service
-</code></pre><pre tabindex="0"><code>[Unit]
-Description=Miniflux
-After=syslog.target network.target
-
-[Service]
-Type=simple
-User=miniflux
-ExecStart=/usr/bin/miniflux -c /etc/miniflux.conf
-Restart=always
-RestartSec=10
-
-[Install]
-WantedBy=multi-user.target
-</code></pre><p>Reload the Systemd daemon</p>
-<pre tabindex="0"><code>sudo systemctl daemon-reload
-</code></pre><p>Start the service and enable to start on host boot</p>
-<pre tabindex="0"><code>sudo systemctl start miniflux &amp;&amp; sudo systemctl enable miniflux
-</code></pre><p>Check the service status</p>
-<pre tabindex="0"><code>sudo systemctl status miniflux
-</code></pre><p><img loading="lazy" src="/img/miniflux-systemd.png" alt="meson-dash"  />
-</p>
-<h2 id="ta-da-your-miniflux-instance-is-ready">Ta-Da!! Your miniflux instance is ready!</h2>
-]]></content:encoded>
+      <description>What is Miniflux? Miniflux is my favorite RSS reader. I enjoy using it. Recently, I attempted to install the latest miniflux reader without Docker and encountered some difficulties. Installation with Docker is straightforward, but it may be necessary to install without Docker in some cases. When I looked for resources to help me solve the problems I encountered during the installation, I found no proper online installation guide. As a result, I decided to create one.</description>
     </item>
     
   </channel>

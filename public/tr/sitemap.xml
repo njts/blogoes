@@ -53,18 +53,8 @@
                 href="https://ntmv.net/tr/search/"
                 />
   </url><url>
-    <loc>https://ntmv.net/tr/license/</loc>
+    <loc>https://ntmv.net/tr/videos/</loc>
     <lastmod>2022-07-16T11:30:03+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ntmv.net/license/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://ntmv.net/tr/license/"
-                />
   </url><url>
     <loc>https://ntmv.net/tr/contact/</loc>
     <lastmod>2022-07-16T11:30:03+00:00</lastmod>
@@ -79,8 +69,18 @@
                 href="https://ntmv.net/tr/contact/"
                 />
   </url><url>
-    <loc>https://ntmv.net/tr/videos/</loc>
+    <loc>https://ntmv.net/tr/license/</loc>
     <lastmod>2022-07-16T11:30:03+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ntmv.net/license/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://ntmv.net/tr/license/"
+                />
   </url><url>
     <loc>https://ntmv.net/tr/facategories/</loc>
   </url><url>
