@@ -1,12 +1,430 @@
-<!doctype html><html lang=tr dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi | Nijatoes - Türkçe Blog</title><meta name=keywords content="linux"><meta name=description content="Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi"><meta name=author content="Nijat"><link rel=canonical href=https://nijatoes.com/tr/linux-tehlukesizlik-artirma/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.css rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.js onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://nijatoes.com/ico/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://nijatoes.com/ico/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://nijatoes.com/ico/favicon-32x32.png><link rel=apple-touch-icon href=https://nijatoes.com/ico/apple-icon-60x60.png><link rel=mask-icon href=https://nijatoes.com/ico/apple-icon-152x152.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=tr href=https://nijatoes.com/tr/linux-tehlukesizlik-artirma/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script defer data-domain=nijatoes.com src=https://app.axshelf.com/app.js></script><meta property="og:title" content="Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi"><meta property="og:description" content="Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi"><meta property="og:type" content="article"><meta property="og:url" content="https://nijatoes.com/tr/linux-tehlukesizlik-artirma/"><meta property="og:image" content="https://nijatoes.com/img/background-g80913faae_640.jpg"><meta property="article:section" content><meta property="article:published_time" content="2022-12-18T11:30:03+00:00"><meta property="article:modified_time" content="2022-12-18T11:30:03+00:00"><meta property="og:site_name" content="Nijatoes - Türkçe Blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://nijatoes.com/img/background-g80913faae_640.jpg"><meta name=twitter:title content="Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi"><meta name=twitter:description content="Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi","item":"https://nijatoes.com/tr/linux-tehlukesizlik-artirma/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi","name":"Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi","description":"Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi","keywords":["linux"],"articleBody":"Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:\n1.Yeni istifadəçi yaratmaq\nuseradd 2.İstifadəçiyə sudo icazəsi vermək\nusermod -aG sudo passwd 3.SSH key yaradılması\nRSA ssh-keygen\nED25519 (Tövsiyyə olunan):ssh-keygen -t ed25519\n4.SSH public keyi serverə kopyalamaq\nssh-copy-id -i user@host\n5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək\nOrijinal faylı saxlamaq: sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig\nsshd_config faylını nano text editor ilə açmaq: sudo nano /etc/ssh/sshd_config\nAvtomatik yenilənmələri açmaq sudo apt install unattended-upgrades\ndpkg-reconfigure --priority=low unattended-upgrades\n7.UFW firewall aktivləşdirmə\nsudo apt install ufw\nufw allow sudo systemctl enable ufw \u0026\u0026 ufw enable\n8.Echo istəkləri (ping) bağlamaq\nsudo nano /etc/ufw/before.rules\n-A --ufw-before-input -p --icmp-type echo-request -j DROP\n9.Fail2Ban\nsudo apt install fail2ban sudo nano /etc/fail2ban/jail.d/webmin.conf [webmin-auth] enabled = true port = filter = webmin-auth logpath = /var/log/auth.log maxretry = 3 bantime = 120 sudo reboot\n","wordCount":"140","inLanguage":"tr","image":"https://nijatoes.com/img/background-g80913faae_640.jpg","datePublished":"2022-12-18T11:30:03Z","dateModified":"2022-12-18T11:30:03Z","author":{"@type":"Person","name":"Nijat"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://nijatoes.com/tr/linux-tehlukesizlik-artirma/"},"publisher":{"@type":"Organization","name":"Nijatoes - Türkçe Blog","logo":{"@type":"ImageObject","url":"https://nijatoes.com/ico/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://nijatoes.com/tr/ accesskey=h title="Nijatoes (Alt + H)"><img src=https://nijatoes.com/other/Axe_001.png alt=logo aria-label=logo height=50>Nijatoes</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li><li><a href=https://nijatoes.com/ title=English aria-label=English>En</a></li></ul></div></div><ul id=menu><li><a href="mailto:hello@nijatoes.com?subject=nijatoes.com" title=Contact><span>Contact</span></a></li><li><a href=https://nijatoes.com/tr/videos/ title=Videos><span>Videos</span></a></li><li><a href=https://github.com/njts/blogoes/ title=Github><span>Github</span>&nbsp;<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li><li><a href=https://nijatoes.com/tr/license/ title=Repost?><span>Repost?</span></a></li><li><a href=https://t.me/blogoes title=Tg><span>Tg</span>&nbsp;<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://nijatoes.com/tr/>Anasayfa</a></div><h1 class=post-title>Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi</h1><div class=post-description>Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi</div><div class=post-meta><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;140 words&nbsp;·&nbsp;Nijat&nbsp;|&nbsp;<a href=https://github.com/njts/blogoes/blob/main/content/linux-tehlukesizlik-artirma.tr.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>Linux təməlli serverlərin təhlükəsizliyinin yüksəldilməsi:</p><p>1.Yeni istifadəçi yaratmaq</p><blockquote><p><code>useradd &lt;user></code></p></blockquote><p>2.İstifadəçiyə sudo icazəsi vermək</p><blockquote><p><code>usermod -aG sudo &lt;user></code>
-<code>passwd &lt;user></code></p></blockquote><p>3.SSH key yaradılması</p><blockquote><p>RSA <code>ssh-keygen</code></p></blockquote><blockquote><p>ED25519 (Tövsiyyə olunan):<code>ssh-keygen -t ed25519</code></p></blockquote><p>4.SSH public keyi serverə kopyalamaq</p><blockquote><p><code>ssh-copy-id -i &lt;key> user@host</code></p></blockquote><p>5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək</p><blockquote><p>Orijinal faylı saxlamaq:
-<code>sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig</code></p></blockquote><blockquote><p>sshd_config faylını nano text editor ilə açmaq:
-<code>sudo nano /etc/ssh/sshd_config</code></p></blockquote><ol start=6><li>Avtomatik yenilənmələri açmaq</li></ol><blockquote><p><code>sudo apt install unattended-upgrades</code></p></blockquote><blockquote><p><code>dpkg-reconfigure --priority=low unattended-upgrades</code></p></blockquote><p>7.UFW firewall aktivləşdirmə</p><blockquote><p><code>sudo apt install ufw</code></p></blockquote><blockquote><p><code>ufw allow &lt;port></code></p></blockquote><blockquote><p><code>sudo systemctl enable ufw && ufw enable</code></p></blockquote><p>8.Echo istəkləri (ping) bağlamaq</p><blockquote><p><code>sudo nano /etc/ufw/before.rules</code></p></blockquote><blockquote><p><code>-A --ufw-before-input -p --icmp-type echo-request -j DROP</code></p></blockquote><p>9.Fail2Ban</p><blockquote><p><code>sudo apt install fail2ban</code>
-<code>sudo nano /etc/fail2ban/jail.d/webmin.conf</code>
-<code>[webmin-auth] enabled = true port = &lt;port> filter = webmin-auth logpath = /var/log/auth.log maxretry = 3 bantime = 120</code>
-<code>sudo reboot</code></p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://nijatoes.com/tr/tags/linux/>linux</a></li></ul><div class=share-buttons><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on twitter" href="https://twitter.com/intent/tweet/?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&url=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f&hashtags=linux"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f&title=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&summary=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&source=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f&title=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on whatsapp" href="https://api.whatsapp.com/send?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si%20-%20https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on telegram" href="https://telegram.me/share/url?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&url=https%3a%2f%2fnijatoes.com%2ftr%2flinux-tehlukesizlik-artirma%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></div></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://nijatoes.com/tr/>Nijatoes - Türkçe Blog</a></span>
-<span>Powered by
-<a href=https://meson.network/ rel="noopener noreferrer" target=_blank>Meson</a>,
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a><p><a href=https://status.nijatoes.com/status/live>Status Page</a></p></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="Kopyala";function s(){t.innerHTML="Kopyalandı!",setTimeout(()=>{t.innerHTML="Kopyala"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+<!DOCTYPE html>
+<html lang="tr" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi | NTMV - TR</title>
+<meta name="keywords" content="linux">
+<meta name="description" content="1.Yeni istifadəçi yaratmaq useradd &lt;user&gt; 2.İstifadəçiyə sudo icazəsi vermək usermod -aG sudo &lt;user&gt; passwd &lt;user&gt; 3.SSH key yaradılması RSA
+ssh-keygen ED25519 (Tövsiyyə olunan):
+ssh-keygen -t ed25519 4.SSH public keyi serverə kopyalamaq ssh-copy-id -i &lt;key&gt; user@host 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək Orijinal faylı saxlamaq:
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig sshd_config faylını nano text editor ilə açmaq:
+sudo nano /etc/ssh/sshd_config 6. Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades dpkg-reconfigure --priority=low unattended-upgrades 7.">
+<meta name="author" content="Nijat">
+<link rel="canonical" href="https://ntmv.net/tr/linux-tehlukesizlik-artirma/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://ntmv.net/ico/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ntmv.net/ico/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ntmv.net/ico/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ntmv.net/ico/apple-icon-60x60.png">
+<link rel="mask-icon" href="https://ntmv.net/ico/apple-icon-152x152.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="tr" href="https://ntmv.net/tr/linux-tehlukesizlik-artirma/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><script defer data-domain="nijatoes.com" src="https://app.axshelf.com/app.js"></script><meta property="og:title" content="Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi" />
+<meta property="og:description" content="1.Yeni istifadəçi yaratmaq useradd &lt;user&gt; 2.İstifadəçiyə sudo icazəsi vermək usermod -aG sudo &lt;user&gt; passwd &lt;user&gt; 3.SSH key yaradılması RSA
+ssh-keygen ED25519 (Tövsiyyə olunan):
+ssh-keygen -t ed25519 4.SSH public keyi serverə kopyalamaq ssh-copy-id -i &lt;key&gt; user@host 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək Orijinal faylı saxlamaq:
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig sshd_config faylını nano text editor ilə açmaq:
+sudo nano /etc/ssh/sshd_config 6. Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades dpkg-reconfigure --priority=low unattended-upgrades 7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ntmv.net/tr/linux-tehlukesizlik-artirma/" />
+<meta property="og:image" content="https://ntmv.net/img/background-g80913faae_640.jpg" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2022-12-18T11:30:03+00:00" />
+<meta property="article:modified_time" content="2022-12-18T11:30:03+00:00" /><meta property="og:site_name" content="NTMV - TR" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://ntmv.net/img/background-g80913faae_640.jpg" />
+<meta name="twitter:title" content="Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi"/>
+<meta name="twitter:description" content="1.Yeni istifadəçi yaratmaq useradd &lt;user&gt; 2.İstifadəçiyə sudo icazəsi vermək usermod -aG sudo &lt;user&gt; passwd &lt;user&gt; 3.SSH key yaradılması RSA
+ssh-keygen ED25519 (Tövsiyyə olunan):
+ssh-keygen -t ed25519 4.SSH public keyi serverə kopyalamaq ssh-copy-id -i &lt;key&gt; user@host 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək Orijinal faylı saxlamaq:
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig sshd_config faylını nano text editor ilə açmaq:
+sudo nano /etc/ssh/sshd_config 6. Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades dpkg-reconfigure --priority=low unattended-upgrades 7."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi",
+      "item": "https://ntmv.net/tr/linux-tehlukesizlik-artirma/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi",
+  "name": "Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi",
+  "description": "1.Yeni istifadəçi yaratmaq useradd \u0026lt;user\u0026gt; 2.İstifadəçiyə sudo icazəsi vermək usermod -aG sudo \u0026lt;user\u0026gt; passwd \u0026lt;user\u0026gt; 3.SSH key yaradılması RSA\nssh-keygen ED25519 (Tövsiyyə olunan):\nssh-keygen -t ed25519 4.SSH public keyi serverə kopyalamaq ssh-copy-id -i \u0026lt;key\u0026gt; user@host 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək Orijinal faylı saxlamaq:\nsudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig sshd_config faylını nano text editor ilə açmaq:\nsudo nano /etc/ssh/sshd_config 6. Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades dpkg-reconfigure --priority=low unattended-upgrades 7.",
+  "keywords": [
+    "linux"
+  ],
+  "articleBody": "1.Yeni istifadəçi yaratmaq useradd 2.İstifadəçiyə sudo icazəsi vermək usermod -aG sudo passwd 3.SSH key yaradılması RSA\nssh-keygen ED25519 (Tövsiyyə olunan):\nssh-keygen -t ed25519 4.SSH public keyi serverə kopyalamaq ssh-copy-id -i user@host 5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək Orijinal faylı saxlamaq:\nsudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig sshd_config faylını nano text editor ilə açmaq:\nsudo nano /etc/ssh/sshd_config 6. Avtomatik yenilənmələri açmaq sudo apt install unattended-upgrades dpkg-reconfigure --priority=low unattended-upgrades 7.UFW firewall aktivləşdirmə sudo apt install ufw ufw allow sudo systemctl enable ufw \u0026\u0026 ufw enable 8.Echo istəkləri (ping) bağlamaq sudo nano /etc/ufw/before.rules -A --ufw-before-input -p --icmp-type echo-request -j DROP 9.Fail2Ban sudo apt install fail2ban sudo nano /etc/fail2ban/jail.d/sshd.conf [sshd] enabled = true port = ssh filter = sshd logpath = /var/log/auth.log maxretry = 3 bantime = 120 ignoreip = whitelist-IP sudo reboot ",
+  "wordCount" : "140",
+  "inLanguage": "tr",
+  "image":"https://ntmv.net/img/background-g80913faae_640.jpg","datePublished": "2022-12-18T11:30:03Z",
+  "dateModified": "2022-12-18T11:30:03Z",
+  "author":{
+    "@type": "Person",
+    "name": "Nijat"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ntmv.net/tr/linux-tehlukesizlik-artirma/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NTMV - TR",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ntmv.net/ico/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ntmv.net/tr/" accesskey="h" title="NTMV (Alt + H)">
+                <img src="https://ntmv.net/other/Axe_001.png" alt="" aria-label="logo"
+                    height="50">NTMV</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://ntmv.net/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+              <a href="https://ntmv.net/tr/contact/" title="İletişim">
+                <span>
+                  <svg width="33" height="33" viewBox="0 -10 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                     <linearGradient id="a">
+                      <stop stop-color="#b5c5cd" stop-opacity=".57895" offset="0"/>
+                      <stop stop-color="#b5c5cd" stop-opacity=".08978" offset="1"/>
+                     </linearGradient>
+                     <linearGradient id="c" x1="31.833" x2="83.033" y1="69.899" y2="107.74" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+                     <linearGradient id="b" x1="65.455" x2="23.159" y1="109.79" y2="122.83" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+                    </defs>
+                    <path d="m21.664 105.88c5.2341-2.2144 10.25-2.8382 15.645-2.2312 5.4632 0.37701 10.696 1.91 15.722 4.0841 4.738 2.7152 8.9494 7.1315 12.424 11.347l-0.35904-0.05771c-3.8905 1.8503-6.1444 3.1954-12.989 3.3906-6.6446 1.1867-17.449-0.10144-22.834-4.5672-4.5492-2.2976-6.4733-8.1845-7.5976-11.932l-0.0113-0.03389z" fill="url(#b)"/>
+                    <path d="m21.664 105.88c5.2341-2.2144 10.25-2.8382 15.645-2.2312 5.4632 0.37701 10.696 1.91 15.722 4.0841 4.738 2.7152 8.9494 7.1315 12.424 11.347l-0.35904-0.05771c-3.2661-4.2272-7.7679-7.6276-12.407-10.263-4.8963-2.5181-10.289-3.0153-15.633-3.7347-5.4234-1.2152-10.095-0.56675-15.382 0.88931l-0.0113-0.03389z"/>
+                    <path d="m74.861 15.367c-2.1619 3.2592-3.9427 7.4178-5.0665 9.6611s-1.156 2.6483-1.7063 3.7543c1.33 1.5237 3.3942 3.4141 5.3105 4.1115 1.6106 0.26855 4.7487 0.19003 6.2454 0.73915 0.00443-0.00265-0.00441-0.02857 0-0.03125 0.96642-1.0208 1.229-1.7677 2.0655-4.0362 0.84378-2.2884 3.5713-4.8179 5.5004-8.2135 1.9404-3.4154 2.5016-5.0623 4.6649-7.2848 0.2045-2.6171-2.7405-4.6695-4.807-6.0106-1.9368-1.0502-5.6404-2.2064-7.4672-2.3208-1.8907 3.0127-2.5486 6.3279-4.7397 9.6311z" fill="#a05a2c"/>
+                    <path d="m54.041 44.858c-1.6066 6.5092-5.1032 11.678-7.9979 19.567-2.859 7.7918-4.2306 11.967-8.1322 20.873-3.8432 8.7724-8.8096 18.435-8.8096 18.435 3.3164 1.2373 7.1216 3.4649 10.43 4.5793-0.18467 0.77886-0.47585 1.5184-0.71875 2.2812 2.7648 2.8267 7.3154 2.7053 11 3.1562 2.7821 0.1781 5.9724 0.58193 8.5938-0.4375 2.7226-4.1209 2.4112-9.7086 4.4838-15.144 2.0588-5.399 3.9029-9.7545 7.0382-16.873 3.1761-7.2106 7.347-14.511 9.1793-20.483-0.5657-4.8188-5.12-7.1774-9.6779-9.1757l-15.389-6.7796z" fill="#ffffb8"/>
+                    <path d="m54.041 44.858c-1.6066 6.5092-5.1032 11.678-7.9979 19.567-2.859 7.7918-4.2306 11.967-8.1322 20.873-3.8432 8.7724-8.8096 18.435-8.8096 18.435 3.3164 1.2373 7.1216 3.4649 10.43 4.5793-0.18467 0.77886-0.47585 1.5184-0.71875 2.2812 2.7648 2.8267 7.3154 2.7053 11 3.1562 2.7821 0.1781 5.9724 0.58193 8.5938-0.4375 2.7226-4.1209 2.4112-9.7086 4.4838-15.144 2.0588-5.399 3.9029-9.7545 7.0382-16.873 3.1761-7.2106 7.347-14.511 9.1793-20.483-0.5657-4.8188-5.12-7.1774-9.6779-9.1757l-15.389-6.7796zm0.86518 1.7551c4.675 2.4218 10.407 3.8311 14.575 5.6483s7.7206 3.7571 8.3941 7.8322c-0.41663 2.4756-2.5849 4.1714-4.2188 5.9688-1.4035 1.8074-2.8803 1.864-5.041 1.7976 0.76864-2.3255 0.8557-4.4279 2.084-6.7976-0.31073-3.7726-3.0406-5.2194-6.7304-5.5938-2.7744 0.41613-5.5863 1.7695-7.1641 4.0586-1.6447 4.0444-2.5505 7.6179-4.1415 13.232-1.5864 5.5973-4.2652 13.11-6.375 19.087s-4.4497 10.761-6.6632 16.123c-3.0894-1.2412-6.1917-2.8749-9.1562-4.5312 3.2031-5.7208 5.4662-11.214 8.5596-17.825 3.136-6.7016 5.4419-14.761 7.923-21.425s5.3864-11.464 7.9548-17.574zm10.594 16.23c0.27934-1.327 0.60751-3.0475 0.97538-4.3176-1.615 0.24218-2.9998-0.08088-4.4674 1.4655 0.06349 1.6441-0.89393 3.4464-1.2892 5.1021-1.9605-1.104-3.0491-3.0708-3.0312-5.25 1.3433-2.2057 3.9123-2.8595 6.431-3.3797 6.0896-0.59186 7.2931 6.6162 1.3815 6.3797zm-0.34375-3.4688c0.14283 1.1411 0.09141 2.2619-0.03125 3.4062-0.6268-0.11729-1.1951-0.69879-1.7188-1.125-0.8073-1.5186 0.28485-2.0258 1.75-2.2812zm-8.0527 1.6054c0.25141 2.1693 1.421 3.6797 3.1693 4.875 4.2699 2.5627 9.372 4.6184 13.693 0.87173 1.4336-1.5292 2.8717-3.4065 3.972-5.1959-1.904 7.2373-5.0488 12.004-8.2425 18.455-3.2151 6.4952-5.3133 10.478-7.7014 17.615-2.3548 7.0372-1.8936 10.854-4.3765 15.08-25.277 2.1092-15.967-5.3093-10.699-20.679 2.0243-6.476 4.7851-13.555 6.6602-18.928 1.8819-5.3922 1.3996-8.4753 3.5253-12.095zm5.4095 0.71222c1.7391 2.336 4.5515 2.3301 6.6973 0.81577-0.60064 1.9603-1.0542 3.5031-1.528 5.4949-2.406 0.08536-4.0835-1.2451-6.118-2.4258 0.31952-1.4653 0.6281-2.6387 0.9487-3.8848z"/>
+                    <path d="m65.051 71.136c-0.53449 1.7287-2.9961 0.60663-3.3818-0.66234 0.75175-1.1728 2.3122 0.80625 3.3818 0.66234zm-1.4434 3.9974c-0.40159 1.1106-3.3952 1.6881-1.7868 3.0274-1.2988 1.0336-3.368-0.72401-2.6303-2.1596 0.47279-0.7872 2.5607-0.06702 1.0293-1.1614-0.85147-0.42781-0.9705-1.371 0.22593-0.80547 1.0698 0.31976 2.1024 0.74862 3.1619 1.099zm-1.6787 4.6492c0.64712 1.6417-1.6058 1.9712-2.2554 1.4714-0.8211-0.03159-1.676-1.6606-2.3706-0.53109-0.86023-1.9944 1.5704-2.5544 2.9216-1.6894 0.58294 0.21428 1.1479 0.4742 1.7044 0.74909zm-1.3728 3.8019c0.64712 1.6417-1.6058 1.9712-2.2554 1.4714-0.8211-0.03159-1.676-1.6606-2.3706-0.53109-0.86023-1.9944 1.5704-2.5544 2.9216-1.6894 0.58294 0.21428 1.1479 0.4742 1.7044 0.74909zm-2.5405 4.562c-1.1937-2.1498-3.8993 1.0779-1.2904 1.4076 0.68378-0.11796 1.0866-0.80472 1.2904-1.4076zm1.1678-0.76018c0.53041 1.816-1.625 3.2849-3.2441 2.6521-1.2741-0.33872-2.32-2.1685-1.0351-3.1272 1.0426-0.88868 2.6946-0.77069 3.6288 0.2026 0.20786 0.11197 0.43038 0.18861 0.65034 0.27242zm-2.1611 5.9852c-1.3605 0.47408-1.0814 3.658-2.7922 2.8785-0.9688-0.59533-2.2405-2.494-0.23567-2.5809 1.0161 0.01634 2.1494 0.50846 3.0279-0.29757zm-2.9376 5.9934c0.64925-2.5474-3.9208-0.30089-1.6575 0.6054 0.57091 0.14115 1.4404 0.04607 1.6575-0.6054zm0.75766 0.27357c-0.33049 1.4355-2.2034 1.7551-3.2267 0.8558-1.358-0.82355-1.4375-3.3727 0.30677-3.7626 1.5017-0.43946 3.5502 0.80946 3.0915 2.5187l-0.17155 0.38805zm-1.1107 2.8467c-0.43752 1.2863-3.1937 0.09386-3.0786 1.2486 1.4699 0.57773 1.133 2.4759-0.44083 1.3136-1.4571-0.49936-2.1103-2.6091-0.46135-3.3462 1.3596-0.60019 2.7683 0.24523 3.9808 0.78393zm-4.6557 3.4913c0.09873 2.077-2.1904-1.0838-0.09848-0.06149l0.0763 0.04765 0.02218 0.01384zm-0.76091 2.1073c0.09874 2.077-2.1904-1.0837-0.09848-0.06149l0.0763 0.04764 0.02218 0.01385zm-0.7609 2.1073c0.09872 2.077-2.1904-1.0838-0.09848-0.06148l0.0763 0.04763 0.02218 0.01385z"/>
+                    <path d="m73.872 13.373c-2.641 2.8292-4.8025 6.4728-6.6533 9.9395 0.64893 0.09566 0.85248 0.70454 1.1875 1.1875-0.99027 2.54-1.5065 2.1114-3.9688 7.125-2.4957 5.0817-2.7344 5.8065-5.7221 7.857-3.2947 2.2611-7.8253 3.1076-11.34 4.7992-6.7027 3.2257-8.2539 8.9429-10.844 17.188s-6.8332 21.331-9.625 28.625-3.8328 10.391-5.875 15.531c0.09087 4.5715 3.0381 9.0402 6.75 11.969s7.9784 5.479 14.209 5.6407 17.66-0.10249 24.314-3.8412c1.5798-7.2582 5.2975-13.729 7.6381-20.688 2.0646-6.1378 4.5184-11.973 6.8293-18.587 2.5707-7.3572 6.5967-15.526 6.3531-21.993s-4.7555-11.403-6.8125-14.438-0.50175-3.4872 0.36706-6.1562c0.85677-2.632 1.6922-4.8762 2.4753-7.444 1.3001 0.0183 2.0602 0.08489 3.3452 0.41278 1.1778-3.2812 2.7348-6.1036 3.25-9.5312 0.00431-0.01248 0.02693-0.01877 0.03125-0.03125-0.87455-0.8354-1.4624-1.5636-2.3994-2.4033l-1.0533 2.8678c-2.6862-0.51086-4.4427-1.6088-6.8776-2.7994-2.2074-0.10797-6.3376-6.1151-3.9232-2.3051l0.75342-2.2975c-0.66492-0.4766-1.6495-0.56917-2.4092-0.62697z" fill="url(#c)"/>
+                    <path d="m73.872 13.373c-2.641 2.8292-4.8025 6.4728-6.6533 9.9395 0.64893 0.09566 0.85248 0.70454 1.1875 1.1875-0.99027 2.54-1.5065 2.1114-3.9688 7.125-2.4957 5.0817-2.7344 5.8065-5.7221 7.857-3.2947 2.2611-7.8253 3.1076-11.34 4.7992-6.7027 3.2257-8.2539 8.9429-10.844 17.188s-6.8332 21.331-9.625 28.625-3.8328 10.391-5.875 15.531c0.09087 4.5715 3.0381 9.0402 6.75 11.969s7.9784 5.479 14.209 5.6407 17.66-0.10249 24.314-3.8412c1.5798-7.2582 5.2975-13.729 7.6381-20.688 2.0646-6.1378 4.5184-11.973 6.8293-18.587 2.5707-7.3572 6.5967-15.526 6.3531-21.993s-4.7555-11.403-6.8125-14.438-0.50175-3.4872 0.36706-6.1562c0.85677-2.632 1.6922-4.8762 2.4753-7.444 1.3001 0.0183 2.0602 0.08489 3.3452 0.41278 1.1778-3.2812 2.7348-6.1036 3.25-9.5312 0.00431-0.01248 0.02693-0.01877 0.03125-0.03125-0.87455-0.8354-1.4624-1.5636-2.3994-2.4033l-0.50197 0.50493c0.96252 0.7237 0.92446 1.0924 1.8174 1.8984 0.20091 0.14917 0.48875 0.42621 0.45893 0.625-3.3232-0.10971-6.5984-1.3358-9.7052-2.9599-3.2061-1.676-3.1946-2.4291-5.0096-4.4092 0.73151-0.07056 1.2325-0.0611 1.874 0.21382l-0.03421-0.40724c-0.66492-0.4766-1.6495-0.56917-2.4092-0.62697zm-0.31349 1.7335c1.825 1.8297 2.1123 2.9646 5.3885 4.5714 3.3273 1.6318 6.3576 1.9044 9.545 2.4188-0.88613 2.7831-0.77576 4.6501-2.8095 7.3319-3.8524-0.21594-7.2457-0.76886-10.837-2.1836-2.3576-1.4556-4.7127-2.2673-6.3026-4.5615 1.613-3.1454 2.8305-4.8217 5.0155-7.577zm-4.536 9.7259c2.1058 0.49522 3.5966 2.0396 5.5399 3.0425 2.4294 0.99362 4.9568 1.8328 7.5938 1.9375-0.76653 2.6164-1.7276 5.3004-2.5312 7.6562-0.79048 2.3173-1.7897 4.2062-0.36194 7.2966 1.4493 3.1371 7.0602 7.2484 6.6889 13.541s-3.4709 13.523-6.0849 20.74c-2.2101 6.1017-4.903 13.381-7.1847 19.448-2.6287 6.9895-5.5931 13.521-7.8386 20.663-7.117 2.1449-16.487 3.92-22.688 3.2188s-9.931-2.8038-13.847-5.6813-5.0298-6.2644-5.9292-10.807c1.9724-5.1516 2.9724-8.2092 5.9265-15.44s6.482-20.203 9.2294-28.496 3.7154-13.357 10.361-16.352c6.8303-3.0782 7.1198-3.0032 10.902-5.0464s5.3289-5.1146 6.6206-8.1012 2.3955-5.2911 3.6024-7.619z"/>
+                    <path d="m74.861 15.367c-2.1619 3.2592-3.9427 7.4178-5.0665 9.6611s-1.156 2.6483-1.7063 3.7543c1.33 1.5237 3.3942 3.4141 5.3105 4.1115 1.6106 0.26855 4.7487 0.19003 6.2454 0.73915 0.00443-0.00265-0.00441-0.02857 0-0.03125 0.96642-1.0208 1.229-1.7677 2.0655-4.0362 0.84378-2.2884 3.5713-4.8179 5.5004-8.2135 1.9404-3.4154 2.5016-5.0623 4.6649-7.2848 0.2045-2.6171-2.7405-4.6695-4.807-6.0106-1.9368-1.0502-5.6404-2.2064-7.4672-2.3208-1.8907 3.0127-2.5486 6.3279-4.7397 9.6311zm11.702-6.6169c1.989 0.66518 4.2837 2.5595 4.4491 4.6273-1.0318 0.14661-5.2451-0.57315-6.9491-1.6586-1.6759-1.0675-2.6283-2.9553-3.0839-4.6441 1.8054-0.19733 3.5949 1.0102 5.5839 1.6754zm-2.8789 3.8839c1.8465 0.71859 3.8723 1.5786 5.827 1.8638-1.1838 2.8019-2.515 3.6282-3.8317 6.5092-1.306 2.8574-4.1356 6.1175-5.0889 8.1178s-0.93481 2.5921-1.4874 3.6605c-1.4995-0.43457-3.7721-0.41056-5.2931-0.77533-1.8628-0.60001-3.0598-2.0824-4.5546-3.3378 0.26796-1.3166 0.57176-1.0103 1.5178-3.0441 0.95761-2.0587 3.7298-7.0566 5.2879-9.8999 1.5332-2.7981 2.3004-5.2291 3.7525-8.1683 0.88538 1.5417 2.303 4.1514 3.8704 5.0741z"/>
+                   </svg>İletişim</span>
+                </a>
+            </li>
+            <li>
+              <a href="https://ntmv.net/tr/videos/" title="Videolar">
+                <span>Videolar</span>
+                </a>
+            </li>
+            <li>
+              <a href="https://ntmv.net/tr/license/" title="İçerik lisansı">
+                <span>İçerik lisansı</span>
+                </a>
+            </li>
+            <li>
+              <a href="https://github.com/njts/blogoes/" title="Github">
+                <span>Github</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+              <a href="https://ntmv.net/tr/search/" title="Ara (Alt &#43; /)" accesskey=/>
+                <span>Ara</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ntmv.net/tr/">Anasayfa</a></div>
+    <h1 class="post-title">
+      Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi
+    </h1>
+    <div class="post-meta"><span title='2022-12-18 11:30:03 +0000 +0000'>Aralık 18, 2022</span>&nbsp;·&nbsp;1 dk&nbsp;·&nbsp;140 kelime&nbsp;·&nbsp;Nijat&nbsp;|&nbsp;<a href="https://github.com/njts/blogoes/blob/main/content/linux-tehlukesizlik-artirma.tr.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> 
+  <div class="post-content"><h4 id="1yeni-istifadəçi-yaratmaq">1.Yeni istifadəçi yaratmaq<a hidden class="anchor" aria-hidden="true" href="#1yeni-istifadəçi-yaratmaq">#</a></h4>
+<pre tabindex="0"><code>useradd &lt;user&gt;
+</code></pre><h4 id="2istifadəçiyə-sudo-icazəsi-vermək">2.İstifadəçiyə sudo icazəsi vermək<a hidden class="anchor" aria-hidden="true" href="#2istifadəçiyə-sudo-icazəsi-vermək">#</a></h4>
+<pre tabindex="0"><code>usermod -aG sudo &lt;user&gt;
+</code></pre><pre tabindex="0"><code>passwd &lt;user&gt;
+</code></pre><h4 id="3ssh-key-yaradılması">3.SSH key yaradılması<a hidden class="anchor" aria-hidden="true" href="#3ssh-key-yaradılması">#</a></h4>
+<p>RSA</p>
+<pre tabindex="0"><code>ssh-keygen
+</code></pre><p>ED25519 (Tövsiyyə olunan):</p>
+<pre tabindex="0"><code>ssh-keygen -t ed25519
+</code></pre><h4 id="4ssh-public-keyi-serverə-kopyalamaq">4.SSH public keyi serverə kopyalamaq<a hidden class="anchor" aria-hidden="true" href="#4ssh-public-keyi-serverə-kopyalamaq">#</a></h4>
+<pre tabindex="0"><code>ssh-copy-id -i &lt;key&gt; user@host
+</code></pre><h4 id="5serverin-ssh-portunu-dəyişmək-və-şifrə-ilə-girişi-bağlamaq-üçün-sshd_config-faylında-dəyişikliklər-etmək">5.Serverin ssh portunu dəyişmək və şifrə ilə girişi bağlamaq üçün sshd_config faylında dəyişikliklər etmək<a hidden class="anchor" aria-hidden="true" href="#5serverin-ssh-portunu-dəyişmək-və-şifrə-ilə-girişi-bağlamaq-üçün-sshd_config-faylında-dəyişikliklər-etmək">#</a></h4>
+<p>Orijinal faylı saxlamaq:</p>
+<pre tabindex="0"><code>sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.orig
+</code></pre><p>sshd_config faylını nano text editor ilə açmaq:</p>
+<pre tabindex="0"><code>sudo nano /etc/ssh/sshd_config
+</code></pre><h4 id="6-avtomatik-yenilənmələri-açmaq">6. Avtomatik yenilənmələri açmaq<a hidden class="anchor" aria-hidden="true" href="#6-avtomatik-yenilənmələri-açmaq">#</a></h4>
+<pre tabindex="0"><code>sudo apt install unattended-upgrades
+</code></pre><pre tabindex="0"><code>dpkg-reconfigure --priority=low unattended-upgrades
+</code></pre><h4 id="7ufw-firewall-aktivləşdirmə">7.UFW firewall aktivləşdirmə<a hidden class="anchor" aria-hidden="true" href="#7ufw-firewall-aktivləşdirmə">#</a></h4>
+<pre tabindex="0"><code>sudo apt install ufw
+</code></pre><pre tabindex="0"><code>ufw allow &lt;port&gt;
+</code></pre><pre tabindex="0"><code>sudo systemctl enable ufw &amp;&amp; ufw enable
+</code></pre><h4 id="8echo-istəkləri-ping-bağlamaq">8.Echo istəkləri (ping) bağlamaq<a hidden class="anchor" aria-hidden="true" href="#8echo-istəkləri-ping-bağlamaq">#</a></h4>
+<pre tabindex="0"><code>sudo nano /etc/ufw/before.rules
+</code></pre><pre tabindex="0"><code>-A --ufw-before-input -p --icmp-type echo-request -j DROP
+</code></pre><h4 id="9fail2ban">9.Fail2Ban<a hidden class="anchor" aria-hidden="true" href="#9fail2ban">#</a></h4>
+<pre tabindex="0"><code>sudo apt install fail2ban 
+</code></pre><pre tabindex="0"><code>sudo nano /etc/fail2ban/jail.d/sshd.conf
+</code></pre><pre tabindex="0"><code>[sshd]
+enabled = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 120
+ignoreip = whitelist-IP
+</code></pre><pre tabindex="0"><code>sudo reboot
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on twitter"
+        href="https://twitter.com/intent/tweet/?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&amp;url=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f&amp;hashtags=linux">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f&amp;title=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&amp;summary=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&amp;source=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f&title=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on whatsapp"
+        href="https://api.whatsapp.com/send?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si%20-%20https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Linux Təməlli Serverlərin Təhlükəsizliyinin Yüksəldilməsi on telegram"
+        href="https://telegram.me/share/url?text=Linux%20T%c9%99m%c9%99lli%20Serverl%c9%99rin%20T%c9%99hl%c3%bck%c9%99sizliyinin%20Y%c3%bcks%c9%99ldilm%c9%99si&amp;url=https%3a%2f%2fntmv.net%2ftr%2flinux-tehlukesizlik-artirma%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022-2023 <a href="https://ntmv.net/tr/">NTMV - TR</a></span>
+    <span>
+        Powered by
+        <a href="https://meson.network/" rel="noopener noreferrer" target="_blank">Meson</a>,
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <p><a href="https://ntmv-status.fly.dev/status/1">Status Page</a></p>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'Kopyala';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'Kopyalandı!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'Kopyala';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

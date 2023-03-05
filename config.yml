@@ -125,19 +125,19 @@ languages:
                 - identifier: rp
                   name: Content license
                   url: /license/
-                  weight: 4
+                  weight: 40
                 - identifier: github
                   name: Github
                   url: https://github.com/njts/blogoes/
-                  weight: 5
+                  weight: 50
                 - identifier: contact
                   name: Contact
                   url: /contact/
-                  weight: 1
+                  weight: 10
                 - identifier: search
                   name: Search
                   url: /search/
-                  weight: 6
+                  weight: 60
 
     tr:
         contentDir: content/posts/tr
@@ -156,23 +156,23 @@ languages:
                 - identifier: rp
                   name: İçerik lisansı
                   url: /license/
-                  weight: 4
+                  weight: 40
                 - identifier: videos
                   name: Videolar
                   url: /videos/
-                  weight: 3
+                  weight: 30
                 - identifier: github
                   name: Github
                   url: https://github.com/njts/blogoes/
-                  weight: 5
+                  weight: 50
                 - identifier: contact
                   name: İletişim
                   url: /contact/
-                  weight: 1
+                  weight: 10
                 - identifier: search
                   name: Ara
                   url: /search/
-                  weight: 6
+                  weight: 60
 
 privacy:
     vimeo:

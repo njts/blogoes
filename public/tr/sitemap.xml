@@ -2,83 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nijatoes.com/tr/tags/linux/</loc>
+    <loc>https://ntmv.net/tr/linux-tehlukesizlik-artirma/</loc>
     <lastmod>2022-12-18T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://nijatoes.com/tr/linux-tehlukesizlik-artirma/</loc>
+    <loc>https://ntmv.net/tr/posts/tr/linux-tehlukesizlik-artirma/</loc>
     <lastmod>2022-12-18T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://nijatoes.com/tr/posts/tr/linux-tehlukesizlik-artirma/</loc>
-    <lastmod>2022-12-18T11:30:03+00:00</lastmod>
-  </url><url>
-    <loc>https://nijatoes.com/tr/</loc>
+    <loc>https://ntmv.net/tr/</loc>
     <lastmod>2022-12-18T11:30:03+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nijatoes.com/"
+                href="https://ntmv.net/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://nijatoes.com/tr/"
+                href="https://ntmv.net/tr/"
                 />
   </url><url>
-    <loc>https://nijatoes.com/tr/posts/</loc>
+    <loc>https://ntmv.net/tr/posts/</loc>
     <lastmod>2022-12-18T11:30:03+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nijatoes.com/posts/"
+                href="https://ntmv.net/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://nijatoes.com/tr/posts/"
+                href="https://ntmv.net/tr/posts/"
                 />
   </url><url>
-    <loc>https://nijatoes.com/tr/tags/</loc>
-    <lastmod>2022-12-18T11:30:03+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nijatoes.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://nijatoes.com/tr/tags/"
-                />
-  </url><url>
-    <loc>https://nijatoes.com/tr/gaganode-nedir-nasil-kurulur/</loc>
+    <loc>https://ntmv.net/tr/gaganode-nedir-nasil-kurulur/</loc>
     <lastmod>2022-12-14T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://nijatoes.com/tr/posts/tr/gaganode-nedir-nasil-kurulur/</loc>
+    <loc>https://ntmv.net/tr/posts/tr/gaganode-nedir-nasil-kurulur/</loc>
     <lastmod>2022-12-14T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://nijatoes.com/tr/tags/web3/</loc>
-    <lastmod>2022-12-14T11:30:03+00:00</lastmod>
+    <loc>https://ntmv.net/tr/search/</loc>
+    <lastmod>2022-07-16T11:30:03+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nijatoes.com/tags/web3/"
+                href="https://ntmv.net/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://nijatoes.com/tr/tags/web3/"
+                href="https://ntmv.net/tr/search/"
                 />
   </url><url>
-    <loc>https://nijatoes.com/tr/categories/</loc>
+    <loc>https://ntmv.net/tr/license/</loc>
+    <lastmod>2022-07-16T11:30:03+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nijatoes.com/categories/"
+                href="https://ntmv.net/license/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://nijatoes.com/tr/categories/"
+                href="https://ntmv.net/tr/license/"
                 />
+  </url><url>
+    <loc>https://ntmv.net/tr/contact/</loc>
+    <lastmod>2022-07-16T11:30:03+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ntmv.net/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://ntmv.net/tr/contact/"
+                />
+  </url><url>
+    <loc>https://ntmv.net/tr/videos/</loc>
+    <lastmod>2022-07-16T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://ntmv.net/tr/facategories/</loc>
+  </url><url>
+    <loc>https://ntmv.net/tr/faseries/</loc>
+  </url><url>
+    <loc>https://ntmv.net/tr/fatags/</loc>
   </url>
 </urlset>
