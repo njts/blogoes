@@ -1,18 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on NTMV</title>
     <link>https://ntmv.net/posts/</link>
     <description>Recent content in Posts on NTMV</description>
+    <image>
+      <title>NTMV</title>
+      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
+      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 23 Feb 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Apr 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About This Website&#39;s Content And Tech Stack</title>
       <link>https://ntmv.net/posts/about-this-website-content-and-tech-stack/</link>
       <pubDate>Thu, 23 Feb 2023 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/about-this-website-content-and-tech-stack/</guid>
-      <description>Posts. I usually have to do a lot of research when working on web development and cybersecurity tasks. Sometimes I find the information I&amp;rsquo;m looking for in the comments section of a website or on a personal blog, which saves me a lot of time. That&amp;rsquo;s why I just openly share my own experiences, code snippets, and some notes here. I believe that some of the information I share will benefit someone and make their job easier.</description>
+      <description>What is the purpose of this blog? What tech stack do I use for this website?</description>
+      <content:encoded><![CDATA[<h3 id="posts">Posts.</h3>
+<p>I usually have to do a lot of research when working on web development and cybersecurity tasks. Sometimes I find the information I&rsquo;m looking for in the comments section of a website or on a personal blog, which saves me a lot of time.
+That&rsquo;s why I just openly share my own experiences, code snippets, and some notes here. I believe that some of the information I share will benefit someone and make their job easier. I don&rsquo;t put ads, paywalls, or other forms of monetization on my content. I don&rsquo;t create long, meaningless SEO content. I just post what I know, what I did to accomplish a certain thing, and what I&rsquo;m thinking about something.</p>
+<h3 id="tech-stack">Tech Stack</h3>
+<p>In this blog, I use <a href="https://gohugo.io/">Hugo</a> open-source static site generator and self-hosted <a href="https://plausible.io/">Plausible Analytics</a>.</p>
+<h4 id="why-hugo">Why Hugo?</h4>
+<p>I love Hugo because it&rsquo;s fast, easy to use, and less bloated. I&rsquo;ve used a variety of CMSs in the past, including WordPress, Joomla, and Ghost, but when I met Hugo, I fell in love with it. Hugo may be the most underappreciated CMS. Hugo makes it extremely simple to make the entire website&rsquo;s code open source because there is no database or backend. This is exactly what I&rsquo;m looking for. In addition, I take a lot of markdown notes. With Hugo, I can easily post them without modifying them. It&rsquo;s is the best match for my requirements.</p>
+<h4 id="why-plausible-analytics">Why Plausible Analytics?</h4>
+<p>Simply because I value my visitors' privacy and dislike Google Analytics and other similar services that collect a lot of information about visitors. I don&rsquo;t need 95% of the data Google Analytics collect. I don&rsquo;t care what model of smartphone my visitor is using, how old they are, what gender they are, and so on. I&rsquo;m just curious about how many people read my articles. Knowing this encourages me to create more content. That&rsquo;s all. This is why I use Plausible Analytics. Plausible doesn&rsquo;t collect user IP, persistent identifiers, cross-site or cross-device tracking data, or any other kind of information I mentioned above. It simply functions as a page view and visitor counter. On my own VPS, I run my own Plausible Analytics instance. If that VPS is hacked, the hacker will be unable to extract any useful information about my visitors. All information is like &ldquo;this article has been read X times&rdquo;, &ldquo;that many visitors come from that country&rdquo;, and so on. There are no personal identifiers, etc.</p>
+<p>To display the total number of visitors on my homepage, I use my custom-made express API <a href="https://github.com/njts/TVAP">TVAP</a> (Total Visitors API for Plausible).</p>
+<blockquote>
+<p>This is my current tech stack. If I change the tech stack of this blog in the future, I&rsquo;ll update this article.</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Gateway X - Even Better Web 3.0</title>
+      <link>https://ntmv.net/posts/gateway-x/</link>
+      <pubDate>Sun, 16 Apr 2023 11:30:03 +0000</pubDate>
+      
+      <guid>https://ntmv.net/posts/gateway-x/</guid>
+      <description>In this article I offer a series of quick-start tips and an analysis comparison of Gateway X with its competitors.</description>
+      <content:encoded><![CDATA[<h2 id="thinking-simple">Thinking Simple</h2>
+<p>The web is essentially a conduit for transmitting files from somewhere to somewhere. The internet has evolved significantly in recent 10-15 years. However, executing this easy approach well is the most significant aspect of the current web.</p>
+<h2 id="not-that-simple">Not That Simple</h2>
+<p>Sending files from one location to another may appear to be simple, but doing it with a large number of users and terabytes of bandwidth is not, especially in Web3. Many Web3 infrastructure solutions have been created in recent years. However, there is still a gap in the bandwidth area.</p>
+<p>According to <a href="https://www.grandviewresearch.com/industry-analysis/web-3-0-blockchain-market-report">Grand View Research</a>, the global Web 3.0 blockchain market size was USD 1.73 billion in 2022 and is expected to expand at a compound annual growth rate (CAGR) of 47.1% from 2023 to 2030.</p>
+<p>Another research by <a href="https://www.emergenresearch.com/industry-report/web-3-market">Emergen Research</a>, indicates 81.5 billion USD market size in 2030, CAGR of 43.7% market growth for Web3 industry.</p>
+<p>As a result, we believe the Web3 infrastructure, particularly the bandwidth market, will expand significantly in the next years, beginning this year. When we consider how much data is produced in the new generation web, we see how important it is to deliver it to end users in a fast and durable manner.
+Every day, users create tens of thousands of NFTs and upload hundreds of gigabytes of data to Arweave. As a leading Web3 storage solution, Arweave&rsquo;s size passed 125TB.
+<img loading="lazy" src="/img/arweave-weave.png" alt="backend"  />
+
+Web3 is growing at the fastest possible speed. In such a circumstance, it is vital to deliver a high-quality service to all users while still being able to extend the service linearly and decentralizedly as needed.</p>
+<h2 id="potential-solution">Potential solution</h2>
+<p>Today I&rsquo;ll just explain and compare <a href="https://docs.meson.network/mcloud/gatewayx.html">Gataway X</a>. Gateway X is a CDN/Bandwidth layer for Web3 infrastructures such as IPFS and Arweave. It was created by Meson Network with the goal of resolving bandwidth scaling challenges with old and modern Web3 storage/infrastructure systems. Meson Network is a pioneer in the decentralized CDN and bandwidth market. Meson Network has a significant edge over their competition by being one of the first movers in this industry. This advantage allows us to establish our brand and market position ahead of our competitors, greatly increasing our chances of long-term success. I have a detailed article about Meson Network.</p>
+<h2 id="what-is-gateway-x-exactly">What is Gateway X exactly?</h2>
+<p>Meson Team used a traffic jam and satellite city comparison to explain the Gateway X in this fantastic <a href="https://blog.meson.network/blog/2023-04-06-meson-gateway-x">blog article</a>. <strong>&ldquo;This situation is like the traffic problem on a highway. There is only one route to deliver goods to IPFS city (ipfs.io). No matter how much the road is widened, congestion will occur when the demand for goods increases. Meson, on the other hand, is like building numerous satellite cities around the world. Users don&rsquo;t have to take the ipfs.io highway; they can directly go to Meson&rsquo;s satellite cities to collect goods.&quot;</strong>
+<img loading="lazy" src="/img/subcity.jpg" alt="backend"  />
+
+I think this analogy explains Gateway X very well. The satellite city analogy here also explains very nicely how Web3 storage services can be decentralized and improved using Gateway X. This new service by Meson Network can eliminate the single point of failure, make Web3 storage services even more sovereign, and can make them faster and more reliable by distributing their content all over the world using Meson 3.0 CDN&rsquo;s highly distributed 30k+ nodes.</p>
+<p>There are some compatibility issues between Web3 services nowadays. When we consider how far Web 2 services have come in terms of integrity, the shortcomings of Web3 in this regard are even more glaring. Gateway X opens a new door in this area as well. It offers great interoperability and compatibility with Web 3.0 storage services. Users and service providers can easily integrate Gateway X to their products. I think the launch of Gateway X service is one of the most important steps in Web 3 interoperability.</p>
+<p>Rather than providing an extensive overview of Gateway X, as it has already been thoroughly explained in a separate article, this piece will instead offer a series of quick-start tips and an analysis comparing Gateway X with its competitors.</p>
+<h2 id="gateway-x-quick-start-guide">Gateway X quick start guide</h2>
+<p><em>(This product is still in beta. You may need to ask for whitelist)</em></p>
+<p>First of all, you need a Meson Network account to use Gateway X.  If you don&rsquo;t have one, you can create one <a href="https://dashboard.meson.network/">here</a>.</p>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-1.png" alt="backend"  />
+</p>
+<blockquote>
+<p>Click Gateway X</p>
+</blockquote>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-2.png" alt="backend"  />
+</p>
+<blockquote>
+<p>New Gateway &gt; Choose IPFS &gt; Enter a tag &gt; Create</p>
+</blockquote>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-3.png" alt="backend"  />
+</p>
+<blockquote>
+<p>Wait a few minutes</p>
+</blockquote>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-4.png" alt="backend"  />
+</p>
+<blockquote>
+<p>Click edit
+<img loading="lazy" src="/img/dashboard-gateway-x-5.png" alt="backend"  />
+</p>
+</blockquote>
+<p>Now your very own gateway is ready. To use it, go back to Upload &gt; Upload to Cloud</p>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-6.png" alt="backend"  />
+</p>
+<p>Open your dashboard, click files, upload a file and get your URL</p>
+<p><img loading="lazy" src="/img/dashboard-gateway-x-7.png" alt="backend"  />
+</p>
+<blockquote>
+<p>That&rsquo;s it!</p>
+</blockquote>
+<h2 id="brief-comparison">Brief Comparison</h2>
+<p>As the Web3 industry continues to gain popularity, companies are introducing more products in this sector. In such a competitive market, delivering creative and superior services is crucial to building brand awareness.</p>
+<p>Our competitors include Pinata, Filebase, and Web3.storage. While our product shares some benefits with them, it also has unique features that set it apart.</p>
+<p>One of the most notable benefits is its vendor-agnostic design, which allows it to be used with local storage. This means that a client can be installed on a storage VPS and used to utilize its storage capacity. Additionally, we provide a managed cloud service, which is a plug-and-play solution.</p>
+<p>Another important feature is its 1GB file cache, enabling us to deliver high-quality video files quickly. It&rsquo;s powered by over 30k Meson 3.0 nodes distributed worldwide, allowing us to deliver files to millions of users in seconds through our CDN node network, which is continuously expanding, with an uptime rate nearing 99.9%.</p>
+<p>We also offer file replication to Filecoin, a dedicated upload gateway, dedicated gateway bandwidth, limitless requests, and other features.</p>
+<p>All things considered, our product is one of the most innovative in its sector, well-positioned for the future.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -21,7 +111,81 @@
       <pubDate>Tue, 21 Feb 2023 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/proper-way-to-install-miniflux/</guid>
-      <description>What is Miniflux? Miniflux is my favorite RSS reader. I enjoy using it. Recently, I attempted to install the latest miniflux reader without Docker and encountered some difficulties. Installation with Docker is straightforward, but it may be necessary to install without Docker in some cases. When I looked for resources to help me solve the problems I encountered during the installation, I found no proper online installation guide. As a result, I decided to create one.</description>
+      <description>How I Install Miniflux RSS reader without docker and docker-compose</description>
+      <content:encoded><![CDATA[<h3 id="what-is-miniflux">What is Miniflux?</h3>
+<p><a href="https://miniflux.app">Miniflux</a> is my favorite RSS reader. I enjoy using it. Recently, I attempted to install the latest miniflux reader without Docker and encountered some difficulties. Installation with Docker is straightforward, but it may be necessary to install without Docker in some cases. When I looked for resources to help me solve the problems I encountered during the installation, I found no proper online installation guide. As a result, I decided to create one. So here is it. Easy, simple Miniflux installation guide</p>
+<h3 id="before-start-installing-the-app-update-the-host">Before start installing the app, update the host</h3>
+<pre tabindex="0"><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre><h3 id="add-the-miniflux-repo">Add the miniflux repo</h3>
+<pre tabindex="0"><code>echo &quot;deb [trusted=yes] https://repo.miniflux.app/apt/ /&quot; | sudo tee /etc/apt/sources.list.d/miniflux.list &gt; /dev/null
+sudo apt update
+</code></pre><h3 id="install-miniflux-and-other-necessary-components">Install miniflux and other necessary components</h3>
+<pre tabindex="0"><code>sudo apt install miniflux postgresql libpq5 postgresql postgresql-client postgresql-client-common postgresql-contrib
+</code></pre><h3 id="create-a-database-for-miniflux">Create a database for miniflux</h3>
+<pre tabindex="0"><code>sudo -u postgres psql
+</code></pre><pre tabindex="0"><code>create database miniflux;
+</code></pre><pre tabindex="0"><code>create user miniflux with encrypted password 'miniflux';
+grant all privileges on database miniflux to miniflux;
+alter user miniflux with superuser;
+\q
+</code></pre><h3 id="edit-miniflux-config">Edit miniflux config</h3>
+<pre tabindex="0"><code>nano /etc/miniflux.conf
+</code></pre><pre tabindex="0"><code># /etc/miniflux.conf
+RUN_MIGRATIONS=1
+DATABASE_URL=user=miniflux password=miniflux dbname=miniflux sslmode=disable
+LISTEN_ADDR=/run/miniflux/miniflux.sock
+</code></pre><p>SQL migration and adding an admin user</p>
+<pre tabindex="0"><code>miniflux -c /etc/miniflux.conf -migrate &amp;&amp; miniflux -c /etc/miniflux.conf -create-admin
+</code></pre><h3 id="run-the-app">Run the app</h3>
+<pre tabindex="0"><code>miniflux -c /etc/miniflux.conf
+</code></pre><p>Press <code>Crtl+Z</code> to go back</p>
+<h3 id="install-nginx-and-certbot">Install nginx and certbot</h3>
+<pre tabindex="0"><code>sudo apt update
+sudo apt install nginx certbot python3-certbot-nginx -y
+</code></pre><pre tabindex="0"><code>sudo nano /etc/nginx/sites-available/miniflux
+</code></pre><h3 id="nginx-config-must-be-like-this">Nginx config must be like this</h3>
+<pre tabindex="0"><code># Change miniflux.example.com with your domain
+server {
+    server_name     miniflux.example.com;
+    listen          80;
+
+    location / {
+        proxy_pass  http://unix:/run/miniflux/miniflux.sock;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</code></pre><h3 id="enable-the-config">Enable the config</h3>
+<pre tabindex="0"><code>sudo ln -s ../sites-available/miniflux /etc/nginx/sites-enabled/miniflux
+sudo certbot --non-interactive --redirect --agree-tos --nginx -d miniflux.example.com -m me@example.com
+</code></pre><h3 id="configure-systemd-service">Configure systemd service</h3>
+<pre tabindex="0"><code>sudo nano /etc/systemd/system/miniflux.service
+</code></pre><pre tabindex="0"><code>[Unit]
+Description=Miniflux
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=miniflux
+ExecStart=/usr/bin/miniflux -c /etc/miniflux.conf
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Reload the Systemd daemon</p>
+<pre tabindex="0"><code>sudo systemctl daemon-reload
+</code></pre><p>Start the service and enable to start on host boot</p>
+<pre tabindex="0"><code>sudo systemctl start miniflux &amp;&amp; sudo systemctl enable miniflux
+</code></pre><p>Check the service status</p>
+<pre tabindex="0"><code>sudo systemctl status miniflux
+</code></pre><p><img loading="lazy" src="/img/miniflux-systemd.png" alt="meson-dash"  />
+</p>
+<h2 id="ta-da-your-miniflux-instance-is-ready">Ta-Da!! Your miniflux instance is ready!</h2>
+]]></content:encoded>
     </item>
     
     <item>
@@ -30,8 +194,98 @@
       <pubDate>Wed, 14 Dec 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/what-is-gaganode-and-how-to-run-in-on-mobile/</guid>
-      <description>What is gaganode? GaGaNode is a Decentralized Residential IP + Bandwidth Marketplace. With Web3.0 technology, it aims to alleviate the global shortage of IPv4 addresses. Users can participate in the Web3 network at home using Idle Electronics even if they do not have a public network IP address. Future technologies that require home bandwidth for development can obtain real home bandwidth resources via GaGa Node.
-What are the advantages of running GaGaNodes?</description>
+      <description>GaGaNode Quick-Start Guide for Mobile, Desktop and Linux Devices</description>
+      <content:encoded><![CDATA[<h3 id="what-is-gaganode">What is gaganode?</h3>
+<p>GaGaNode is a Decentralized Residential IP + Bandwidth Marketplace. With Web3.0 technology, it aims to alleviate the global shortage of IPv4 addresses. Users can participate in the Web3 network at home using Idle Electronics even if they do not have a public network IP address. Future technologies that require home bandwidth for development can obtain real home bandwidth resources via GaGa Node.</p>
+<h3 id="what-are-the-advantages-of-running-gaganodes">What are the advantages of running GaGaNodes?</h3>
+<p>To earn GaGaNode Credits, you simply need an idle Android phone, as well as a tvbox, Raspberry Pi, computer, or other electrical equipment.
+Users do not need to invest in additional mining machines; instead, they simply donate their home broadband resources to earn GaGaNode Credits.</p>
+<h3 id="lets-start">Let&rsquo;s start</h3>
+<h3 id="before-you-start-you-need-to-register-herehttpsoutnijatoescomgaganode-register-and-create-a-gaganode-account">Before you start, you need to register <a href="https://out.nijatoes.com/GaGaNode-register">HERE</a> and create a GaGaNode account.</h3>
+<ul>
+<li><a href="https://out.nijatoes.com/GaGaNode-register">https://out.nijatoes.com/GaGaNode-register</a></li>
+</ul>
+<p><img loading="lazy" src="/img/screenshot.png" alt=""  />
+</p>
+<h2 id="runnig-gaganode-on-android-phone">Runnig GaGaNode on Android phone</h2>
+<ul>
+<li>Download and Install <a href="https://assets.coreservice.io/public/package/32/gaganode/1.0.3/gaganode-1_0_3.apk">GaGaNode</a> android app</li>
+</ul>
+<blockquote>
+<p>Copy your token
+<img loading="lazy" src="/img/install_run.c4bd2c82.png" alt=""  />
+</p>
+</blockquote>
+<blockquote>
+<p>Start android app and enter your token
+<img loading="lazy" src="/img/android-03.5ff0f04c.jpeg" alt=""  />
+</p>
+</blockquote>
+<h3 id="enable-auto-starting">Enable Auto-starting</h3>
+<blockquote>
+<p>Set &lsquo;No restrictions&rsquo; when start.
+<img loading="lazy" src="/img/android-01.cbbe2b89.png" alt=""  />
+</p>
+</blockquote>
+<blockquote>
+<p>Enable Autostart.
+<img loading="lazy" src="/img/android-02.47e56405.png" alt=""  />
+</p>
+</blockquote>
+<h2 id="runnig-gaganode-on-windows-pc">Runnig GaGaNode on Windows PC</h2>
+<h3 id="open-powershell-in-windows">Open PowerShell in Windows</h3>
+<ul>
+<li>Use the “Run” window to open PowerShell
+You can open Windows PowerShell with administrator privileges from Run. A quick way to launch this window is to press the <code>Win</code> + <code>R</code> keys on the keyboard. Then, type <code>powershell</code> and press Enter or click OK.</li>
+</ul>
+<p><img loading="lazy" src="/img/windows-03.c050e0c7.png" alt=""  />
+</p>
+<p>Switch from PowerShell to PowerShell Admin. If you’re already working in PowerShell but you need to switch over to <code>admin</code> mode, you can do so without closing PowerShell. Just run this command:</p>
+<pre tabindex="0"><code>start-process powershell -verb runas
+</code></pre><p><img loading="lazy" src="/img/windows-04.6eb30a24.png" alt=""  />
+</p>
+<h4 id="1download--install">1.Download &amp; Install</h4>
+<pre tabindex="0"><code>wget -Uri &quot;https://assets.coreservice.io/public/package/20/app/1.0.3/app-1_0_3.tar.gz&quot; -OutFile &quot;app-windows-amd64.tar.gz&quot; ; tar -zxf app-windows-amd64.tar.gz ; rm -Force app-windows-amd64.tar.gz ; cd ./app-windows-amd64 ; ./app.exe service install
+</code></pre><h4 id="2start-service">2.Start Service</h4>
+<pre tabindex="0"><code>./app.exe service start
+</code></pre><h4 id="3set-token">3.Set Token</h4>
+<pre tabindex="0"><code>./apps/gaganode/gaganode.exe config set --token=your_token_here
+</code></pre><h4 id="4restart-app">4.Restart APP</h4>
+<pre tabindex="0"><code>./app.exe restart
+</code></pre><h4 id="5check-app-status">5.Check APP Status</h4>
+<pre tabindex="0"><code>./app.exe status
+</code></pre><blockquote>
+<p>After 1-3 minutes, you will have a new terminal record at terminals open in new node.
+<img loading="lazy" src="/img/windows-06.0d8b27e5.png" alt=""  />
+</p>
+</blockquote>
+<h2 id="runnig-gaganode-on-linux-vps-and-desktops">Runnig GaGaNode on Linux VPS and Desktops</h2>
+<h3 id="install-dependencies-packages">Install Dependencies Packages</h3>
+<pre tabindex="0"><code>sudo apt-get update -y &amp;&amp; sudo apt-get -y install curl tar ca-certificates
+</code></pre><h4 id="1download--install-1">1.Download &amp; Install</h4>
+<pre tabindex="0"><code>curl -o app-linux-amd64.tar.gz https://assets.coreservice.io/public/package/22/app/1.0.3/app-1_0_3.tar.gz &amp;&amp; tar -zxf app-linux-amd64.tar.gz &amp;&amp; rm -f app-linux-amd64.tar.gz &amp;&amp; cd ./app-linux-amd64 &amp;&amp; sudo ./app service install
+</code></pre><h4 id="2start-service-1">2.Start Service</h4>
+<pre tabindex="0"><code>sudo ./app service start
+</code></pre><h4 id="3check-app-status">3.Check APP Status</h4>
+<pre tabindex="0"><code>./app status
+</code></pre><p>console output:</p>
+<blockquote>
+<p><code>meson@meson-server:~/app-linux-amd64$ ./app status [gaganode]:		local version:[1.0.3] latest version:[1.0.3] status:[DOWNLOADED]</code></p>
+</blockquote>
+<h4 id="4set-token">4.Set Token</h4>
+<pre tabindex="0"><code>sudo ./apps/gaganode/gaganode config set --token=your_token_here
+</code></pre><h4 id="5restart-app">5.Restart APP</h4>
+<pre tabindex="0"><code>./app restart
+</code></pre><blockquote>
+<h3 id="terminal-recording">Terminal Recording</h3>
+</blockquote>
+<p><a href="https://asciinema.org/a/545183"><img loading="lazy" src="https://asciinema.org/a/545183.svg" alt="asciicast"  />
+</a></p>
+<blockquote>
+<h3 id="notice">Notice:</h3>
+<p>This article is a summary of the <a href="https://docs.gaganode.com/">official documentation</a>. I strongly recommend looking through the official documentation for more in-depth information and installation instructions</p>
+</blockquote>
+]]></content:encoded>
     </item>
     
     <item>
@@ -40,8 +294,131 @@ What are the advantages of running GaGaNodes?</description>
       <pubDate>Tue, 18 Oct 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/wordpress-without-php/</guid>
-      <description>What is Meson Guru? Meson.Guru is a semi-automatic news aggregator for Meson Network. You can find all the latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.
-Backed When the idea of creating such a website came to me, I decided to build my own little CMS with node.</description>
+      <description>Easy-to-use of wordpress and speed of static website. In this short article, I explain how I serve my new Meson.guru Wordpress websites without PHP.</description>
+      <content:encoded><![CDATA[<h3 id="what-is-meson-guru">What is Meson Guru?</h3>
+<p>Meson.Guru is  a semi-automatic news aggregator for Meson Network. You can find all the latest news, tweets, and videos about Meson Network in one place. We do not republish or store any material on our server. We simply provide a link to the relevant content.</p>
+<p><img loading="lazy" src="/img/mesonguru.png" alt="meson.guru"  />
+</p>
+<h3 id="backed">Backed</h3>
+<p>When the idea of creating such a website came to me, I decided to build my own little CMS with node.js. After writing the first hundred lines of code, I realized it wouldn&rsquo;t be as simple as I thought and decided to use one of the popular CMSs. I chose Wordpess because it provides numerous options and flexibility. But there was a problem. I don&rsquo;t like PHP. it&rsquo;s slow and outdated. You understand what I mean. Meanwhile, I decided to deliver this site to the end user without any PHP runtime. Clean and fresh.. 👌</p>
+<h3 id="how-it-works">How it works</h3>
+<p>WordPress 6.0 is installed on the internal network of my super private server. I&rsquo;m still building the website with Wordpress. I set up a few cron jobs with a five-minute interval loop. First cron job is for Simply Static plugin and GitHub pushes. Simply Static plugin generates a new static version of the wordpess generated website every five minutes and saves it to my super secret server&rsquo;s /static directory. Following that, the second github push code runs and uploads that static files to my Github repo, sends a telegram notification, chekcs the server state etc.
+That is all. Our website is now static.</p>
+<p><img loading="lazy" src="/img/archt.jpg" alt="backend"  />
+</p>
+<ul>
+<li>Auto static website build, github push and telegram notification</li>
+</ul>
+<pre tabindex="0"><code>#!/bin/bash
+start=`date +%s.%N`
+cpuload=$(top -bn1 | grep load | awk '{printf &quot;%.2f%%\t\t\n&quot;, $(NF-2)}')
+ramload=$(free -m | awk 'NR==2{printf &quot;%.2f%%\t\t&quot;, $3*100/$2}')
+
+# Build static website
+cd /var/www/html
+wp cron event schedule simply_static_site_export_cron --allow-root
+wp cron event run --due-now --allow-root
+cd /var/www/static
+status=$(git diff --name-only)
+
+# Time stamp
+builddate() {
+  date +&quot;%Y/%m/%d %H:%M:%S&quot;
+}
+end=`date +%s.%N`
+buildtime=$( echo &quot;$end - $start&quot; | bc -l )
+echo &quot;$(builddate) buildTime ${buildtime}         cpuLoad: ${cpuload} ramLoad: ${ramload}&quot;  &gt;&gt; logs.txt
+sed -e 's/\s\+/,/g' logs.txt &gt; logs.csv
+
+# Github push
+git add .
+git commit -m &quot;$(builddate) UTC  auto commit&quot;
+git push -u origin main --force
+
+
+# Telegram notification
+/var/www/private-sripts/telegram-notf.sh &quot;
+|--------------changes-----------|
+${status}
+                       |
+|---------------system------------|
+| build time ${buildtime}
+| cpu load: ${cpuload}
+| ram load: ${ramload}
+                       |
+|------------build date----------|
+| $(builddate)
+|--------------------------------------|
+&quot;
+/var/www/static/custom-scripts/mem-check.sh
+responsetime=$(curl -H 'Cache-Control: no-cache, no-store' -s -w '\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n' -o /dev/null &quot;https://meson.guru/?$(date +%s)&quot;)
+results=&quot;$(builddate) ${responsetime}&quot;
+echo ${results} &gt; responsetime.temp
+</code></pre><ul>
+<li>Telegram notification handler</li>
+</ul>
+<pre tabindex="0"><code>
+#!/bin/bash
+    
+GROUP_ID=&lt;group_id&gt;
+BOT_TOKEN=&lt;bot_token&gt;
+
+# this 3 checks (if) are not necessary but should be convenient
+if [ &quot;$1&quot; == &quot;-h&quot; ]; then
+  echo &quot;Usage: `basename $0` \&quot;text message\&quot;&quot;
+  exit 0
+fi
+
+if [ -z &quot;$1&quot; ]
+  then
+    echo &quot;Add message text as second arguments&quot;
+    exit 0
+fi
+
+if [ &quot;$#&quot; -ne 1 ]; then
+    echo &quot;You can pass only one argument. For string with spaces put it on quotes&quot;
+    exit 0
+fi
+
+curl -s --data &quot;text=$1&quot; --data &quot;chat_id=$GROUP_ID&quot; 'https://api.telegram.org/bot'$BOT_TOKEN'/sendMessage' &gt; /dev/null
+</code></pre><p><img loading="lazy" src="/img/tg.png" alt="tg"  />
+</p>
+<ul>
+<li>Memory check</li>
+</ul>
+<pre tabindex="0"><code>#!/bin/bash
+
+memlimit=50000 # in KB
+
+# Reboot if memeory is lower than memory limit
+mem=$(cat /proc/meminfo | egrep &quot;^MemFree&quot; |awk '{print $2}')
+if (( mem &lt;= $memlimit )); then
+/var/www/private-sripts/telegram-notf.sh &quot;Free memory is $(($mem/1024)) MB and it's lower than $(($memlimit/1024)) MB limit, so we restart the system&quot;
+/var/www/static/custom-scripts/reboot.sh
+else
+/var/www/private-sripts/telegram-notf.sh &quot;Memory is fine. $(($mem/1024)) MB is free&quot;
+fi
+</code></pre><ul>
+<li>Cron tab</li>
+</ul>
+<pre tabindex="0"><code>@reboot /var/www/static/custom-scripts/cron.sh
+*/5  * * * * tmux send-keys -t 0 &quot;/var/www/static/custom-scripts/auto-git.sh&quot; Enter
+0 */4 * * * /var/www/static/custom-scripts/reboot.sh
+55 23 * * * /var/www/private-sripts/tg-file.sh
+</code></pre><p>Full code is on <a href="https://github.com/njts/mesonguru">https://github.com/njts/mesonguru</a></p>
+<h3 id="public-hosting">Public hosting.</h3>
+<p>Now we need a hosting to host our static files. Most people will most likely consider Netlify as a solution for this. It&rsquo;s fast and free. However it doesn&rsquo;t fit in this situation. Netlify provides 300 minutes free build time each month. As I mentioned above, we rebuild meson.guru website every 5 minutes, and each rebuild takes about 10 seconds. A quick calculation reveals that we need approximately 1.4k minutes of build time each month. Extra 1000 minutes in Netlify cost about $14 per month.</p>
+<p>There are few cheap alternatives to host and deploy a static website. CDN store buckets like BunnyCDN, S3 free tier and self-hosted solutions.
+I like self-hosted solutions because I have more control over them. I chose <a href="https://coolify.io">Coolify</a> to host my website. Coolify is a self-hosted Heroku/Netlify alternative with a ton of great features. It has an auto deploy feature, so whenever my cron job pushes a new version of meson.guru to github, it will deploy the new versions automatically.</p>
+<p>I rented a VPS from Hetzer for $5 per month, installed Coolify on it, and used Coolify to deploy the static version of Meson.guru. It is less expensive than Netlify, and I can run a lot of other applications on the same vps.</p>
+<p><img loading="lazy" src="/img/coolify-1.png" alt="coolify"  />
+
+<img loading="lazy" src="/img/coolify-2.png" alt="coolify"  />
+</p>
+<p>This was also a fun experience. I learned a lot of new things and shared some of them with you.
+End of the day, this is my simple solution to serve WordPress websites without PHP runtime.</p>
+<p>Thanks for reading.</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -50,7 +427,96 @@ Backed When the idea of creating such a website came to me, I decided to build m
       <pubDate>Thu, 01 Sep 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/can-open-service-subdaos-bring-back-heliums-glory-days/</guid>
-      <description>When it comes to the decentralized web, decentralization has always been a source of contention. Some believe that the decentralized web is truly decentralized, while others believe that it is unrealistic. To be honest, I believe in second thoughts as well. One of the primary reasons for this is that decentralized web infrastructure continues to rely heavily on centralized infrastructure. Many DAPPs are still hosted on servers provided by major cloud providers such as Amazon and Google, as I mentioned in my previous article.</description>
+      <description>In this article, I explain why open service subdaos are very sound idea</description>
+      <content:encoded><![CDATA[<p>When it comes to the decentralized web, decentralization has always been a source of contention. Some believe that the decentralized web is truly decentralized, while others believe that it is unrealistic. To be honest, I believe in second thoughts as well. One of the primary reasons for this is that decentralized web infrastructure continues to rely heavily on centralized infrastructure. Many DAPPs are still hosted on servers provided by major cloud providers such as Amazon and Google, as I mentioned in my previous article.</p>
+<p>I saw <a href="https://github.com/helium/HIP/blob/main/0068-open-service-subdao.md">HIP 68</a> recommended on Helium&rsquo;s Github a while ago, and it inspired me to write this article. There was a section in HIP 68 that suggested running the Meson Network CDN nodes on Helium hotspots. I&rsquo;ll explain why, this is a very sound idea.</p>
+<blockquote>
+<p>Note 1: All opinions expressed in this article are my personal opinions. I&rsquo;d like to state right away that this article is also about missing pieces of some Web3 projects. But that doesn&rsquo;t mean I don&rsquo;t like them. I support and appreciate every project working to decentralize the internet. I believe they will overcome the issues mentioned here.</p>
+</blockquote>
+<p>Let&rsquo;s get started.</p>
+<h3 id="why-helium">Why Helium?</h3>
+<p>Why does integrating Meson into the Helium network make more sense when there are such good and decentralized server/node infrastructure examples like Akash and Flux available today?</p>
+<p>The two biggest players in the decentralized cloud industry are Akash and Flux. They&rsquo;re doing an excellent job of developing the decentralized clouds. However, there are some parts that I believe are missing. They have a long way to go in terms of distribution, despite how good they are at decentralization.</p>
+<p><img loading="lazy" src="/img/flux-providers.jpg" alt="Flux Providers"  />
+</p>
+<p>There are three basic types of providers in Akash and Flux.</p>
+<h4 id="data-centers">Data centers</h4>
+<p>As their names indicate, data centers that provide the basic processing power are not much different from the data centers we are accustomed to.</p>
+<h4 id="secondary-market-vendors">Secondary market vendors</h4>
+<p>Secondary market vendors are users who sell computing power from major central cloud providers such as AWS, GCP, and Hetzner on Akash and Flux. While the processing power still comes from large central data centers, it is more decentralized as it is provided by a large number of users.</p>
+<h4 id="home-providers">Home providers</h4>
+<p>It is the rarest but most valuable type of user. Home users contribute to the network with the servers they host in their own homes and play a major role in the decentralization of the network.</p>
+<p>The first two types of providers provide the majority of the processing power in decentralized clouds. As far as I can see, Akash is currently working to increase home providers. One of these works was the Akash Supermini device. The Supermini can be thought of as a home server. This was a great idea, but unfortunately it&rsquo;s been postponed for now.</p>
+<p><img loading="lazy" src="/img/akash-supermini.webp" alt="supermini"  />
+</p>
+<p>Furthermore, these two decentralized cloud providers can only run Docker containers and do not offer IPv4 or IPv6 addresses.</p>
+<h3 id="what-makes-helium-unique">What makes Helium unique?</h3>
+<p>Helium is inherently distributed. It&rsquo;s not a good idea to put together and run a bunch of helium hotspot miners in one room. Each Helium hotspot must be at least 300 feet apart from the others. This ensures complete dispersion. As a result, the Helium Network has the potential to create sub-networks that operate in highly distributed networks.</p>
+<p><img loading="lazy" src="/img/helium-map.png" alt="Helium Map"  />
+</p>
+<h3 id="what-types-of-sub-networks-are-possible">What types of sub-networks are possible?</h3>
+<p>VPN, CDN, ping server and other sub-networks that require less processing power can be created.
+For the rest of this article, I&rsquo;ll go over the Meson CDN example. Meson CDN is a promising project that aims to build a decentralized CDN for Web 3.0.</p>
+<h3 id="what-are-the-advantages-of-running-the-meson-cdn-on-helium-nodes-for-the-helium-network">What are the advantages of running the Meson CDN on Helium nodes for the Helium network?</h3>
+<h4 id="1-it-has-the-potential-to-reduce-the-number-of-offline-hotspots-in-the-helium-network">1. It has the potential to reduce the number of offline hotspots in the Helium network.</h4>
+<p>At the moment, 35% of the Helium network&rsquo;s total hotspots are offline, and this figure is increasing by the day. Low hotspot earnings are one of the main reasons for such a high offline hotspot rate. Some hotspots' earnings no longer motivate people to operate them. One of the most significant benefits of Meson Network is that it will strengthen the revenue model for Helium hotspot owners. People who run Meson CDN on their hotspots will be able to earn extra HNT. Furthermore, Meson CDN will increase overall data credit utilization in the helium network. This will help in keeping more hotspots online. On the other hand, Meson CDN nodes consume very few resources on the host machine, which means they can run on any hotspot.</p>
+<h4 id="2-meson-can-improve-the-performance-of-the-5g-network">2. Meson can improve the performance of the 5G network.</h4>
+<p>Helium strives to become one of the biggest players in the global 5G market. At the time of writing this article, there are 2644 5G hotspots connected to the network, and it continues to increase every day.</p>
+<p>If Meson CDN nodes are installed in these hotspots, users connecting to the internet using Helium 5G can achieve faster web performance than 5G provided by other traditional mobile providers. Of course, this performance increase will be valid for websites where Meson CDN is used, but considering that Meson has the potential to become one of the largest CDNs in the world, this is not a big problem.</p>
+<h3 id="how-it-will-improve-the-performance-of-the-5g-network">How it will improve the performance of the 5G network?</h3>
+<p>Hotspots/modems are the first points of contact between the user and the destination server. Furthermore, these are the closest possible points to install CDN servers. Traditional CDN providers are unable to easily install CDN servers at these points. If Helium and Meson collaborate to accomplish this, it may start a new era in the CDN and 5G industries.</p>
+<blockquote>
+<p>Server-side caching
+<img loading="lazy" src="/img/server-side-cache.jpg" alt="server-side"  />
+</p>
+</blockquote>
+<blockquote>
+<p>Traditional CDNs
+<img loading="lazy" src="/img/traditional.jpg" alt="Traditional CDNs"  />
+</p>
+</blockquote>
+<blockquote>
+<p>Meson + Helium 5G
+<img loading="lazy" src="/img/meson-helium5g.jpg" alt="Meson &#43; Helium 5G"  />
+</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Costs</th>
+<th>Server load</th>
+<th>Latency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server-side</td>
+<td>High</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Traditional CDNs</td>
+<td>Low</td>
+<td>Low</td>
+<td>Median</td>
+</tr>
+<tr>
+<td>Meson + Helium 5G</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<p>In this day and age, using server-side caching is something I think you should only use if you&rsquo;re also high. I know, your latest and greatest WordPress server-side caching plugin functions like a magic.
+Hovever, this method has repeatedly been shown to be ineffective when subjected to high loads. You&rsquo;ll need an offsite cache solution.</p>
+<h4 id="3-in-5g-hotspots-it-economizes-bandwidth-coming-from-outside-to-the-hotspot">3. In 5G hotspots, it economizes bandwidth coming from outside to the hotspot.</h4>
+<p>When a user connects to the internet via Helium 5G hotspot and logs into a website that uses Meson CDN, if the hotspot is running a Meson CDN node, the hotspot can use its own local cache instead of requesting data from another server each time. In this way, that hotspot can save the internet bandwidth it spends requesting data from servers around the world</p>
+<p>I have covered the three most important topics above. Of course, there are other topics to consider.  The most important of these is interoperability.  Instead of each project working separately, if they collaborate and develop compatible software with each other, they can accelerate web3 adoption and provide a better environment for developers and users. Only by considering the web 3.0 as a whole can we produce something useful. Despite the fact that we all work on different projects and follow different paths, our ultimate goal is the same. A better Internet for a brighter future.
+If you have something to say or discuss about it, you can write it under this Twitter post. I&rsquo;m curious about your thoughts too. I have not activated the comment feature here. Let&rsquo;s run like this for a while)</p>
+]]></content:encoded>
     </item>
     
     <item>
@@ -59,7 +525,85 @@ Backed When the idea of creating such a website came to me, I decided to build m
       <pubDate>Sat, 16 Jul 2022 11:30:03 +0000</pubDate>
       
       <guid>https://ntmv.net/posts/my-thoughts-and-experiences-on-meson-decentralized-cdn-network/</guid>
-      <description>The Web is going to be decentralized. Must be. Wait, what do we need to achieve a fully decentralized future? Of course, decentralized computing and edge infrastructure. When we&amp;rsquo;re talking about Web3, there is always a silent moment for backend infrastructures. Most dapps, swaps, and even nft marketplace websites are running on big corporation-owned centralized datacenters like AWS, Google, and Azure/Microsoft. Meson is a blockchain project working to fill part of that gap.</description>
+      <description>This is my first blog post on my decentralized blog and it is about the decentralized web:)</description>
+      <content:encoded><![CDATA[<p>The Web is going to be decentralized. Must be. Wait, what do we need to achieve a fully decentralized future? Of course, decentralized computing and edge infrastructure. When we&rsquo;re talking about Web3, there is always a silent moment for backend infrastructures. Most dapps, swaps, and even nft marketplace websites are running on big corporation-owned centralized datacenters like AWS, Google, and Azure/Microsoft. </p>
+<p><a href="https://meson.network">Meson</a> is a blockchain project working to fill part of that gap. Meson is a decentralized CDN run by people for people. It already has 30k+ edge nodes worldwide so far.
+I&rsquo;m also running over 108 Meson 3.0 servers/nodes in 17 counties and 27 different cities worldwide.</p>
+<p><img loading="lazy" src="/img/map-1.png" alt="map-1"  />
+</p>
+<p>My total effective bandwidth is ~71 Gbps.
+It&rsquo;s inspiring to be a part of this amazing network. My next article will be about installing nodes for Meson Network and my experiences as a node runner. Wait for it.</p>
+<p>Meson Network has two different CDNs. Meson 3.0 and m-cdn. M-cdn is a hybrid multi-cdn that uses a lot of third-party CDN services. Meson 3.0 is what I was looking for. It is a truly decentralized CDN with 30K nodes globally. So I decided to do some tests with it.</p>
+<p>First of all, I&rsquo;ve spun up a VM with an NGINX server. Later, I created a simple web page by forking <a href="https://codepen.io/suez/pen/ZEqxBb">this</a> codepen repo. Uploaded to server. Now we have a running website. Let&rsquo;s connect it to Meson.</p>
+<h3 id="starting-with-meson-30">Starting with Meson 3.0</h3>
+<p>Meson&rsquo;s dashboard has a user-friendly and easy-to-understand UI.
+First, go to your DNS provider&rsquo;s dashboard, and create an A-record that points to your web server. Later, open dashboard.meson.network, create an account, &gt; pull zones, &gt; create pull zone.</p>
+<p><img loading="lazy" src="/img/meson-dash.png" alt="meson-dash"  />
+</p>
+<p>Enter your domain name without https. You can start using Meson for free. There is a $5 credit for new users. Give it a <a href="https://dashboard.meson.network">try</a>.
+ </p>
+<h3 id="my-testing-and-comparisons">My testing and comparisons</h3>
+<p>First, I&rsquo;ve tried to connect my website directly to see what the end point is. Cdn redirected me to a URL. I found an IP in my country after pinging that URL&rsquo;s sub-domain. 
+Then I noticed that the IP belongs to one of my servers, which I&rsquo;m running for the Meson network. That was a fascinating moment.
+Then I also connected to another node&rsquo;s IP, which is run by my close friend. It&rsquo;s amazing.</p>
+<p><img loading="lazy" src="/img/browser-1.png" alt="browser-1"  />
+
+<img loading="lazy" src="/img/terminal-1.png" alt="terminal-1"  />
+
+<img loading="lazy" src="/img/nodes-1.png" alt="nodes-1"  />
+</p>
+<h3 id="test-2-coverage">Test 2: Coverage</h3>
+<p>I&rsquo;ve spun up 9 VMs in 7 different cities and sent a get request to <a href="https://pz-dzulrd.meson.network">https://pz-dzulrd.meson.network</a> to see where I will be redirected.
+Results👇
+<img loading="lazy" src="/img/multissh.png" alt="multissh"  />
+</p>
+<ul>
+<li>Paris 🇫🇷 (a1) - Paris 🇫🇷 (51.178.161.211)</li>
+<li>Seul 🇰🇷 (a10) - Seul 🇰🇷 (20.41.117.166)</li>
+<li>Sydney 🇦🇺 (a11) - Sydney 🇦🇺 (20.211.98.179)</li>
+<li>Hong Kong 🇭🇰 (a12) - Hong Kong 🇭🇰 (20.187.102.213)</li>
+<li>Hong Kong 2 🇭🇰 (a14) - Hong Kong 🇭🇰  (20.187.147. 38)</li>
+<li>Hong Kong 3 🇭🇰 (a16) - Hong Kong 🇭🇰  (20.187.147.38)</li>
+<li>Oslo 🇳🇴 (a13) - Oslo 🇳🇴  (51.13.112.214)</li>
+<li>Chennai 🇮🇳 (a15) - Pune 🇮🇳 (20.219.147.47)</li>
+<li>Virginia 🇺🇸 (a17) - Montreal 🇨🇦 (51.222.210.164)</li>
+</ul>
+<h3 id="test-3-gtmetrix-one-to-one-comparison">Test 3: Gtmetrix one-to-one comparison</h3>
+<p>I ran this test on two identical copies of this page. One copy is running on my single VPS, the other one is served by Meson Network. The results say everything. Meson is the clear winner.</p>
+<p><img loading="lazy" src="/img/compare-1.jpg" alt="compare-1"  />
+
+<a href="https://gtmetrix.com/compare/3ojoLI6g/azZfx8uM">Report link</a></p>
+<hr>
+<p>There is only one red column, and it&rsquo;s because of redirecting. I will explain how this problem can be solved with anycast shortly. </p>
+<p>As you saw, I didn&rsquo;t compare Meson with other CDN providers like Cloudflare, Bunnycdn, and Cloudfront because I don&rsquo;t think it&rsquo;s fair to compare them yet. However, I will when the time comes. At the end of the day, it works well.</p>
+<h3 id="stability">Stability</h3>
+<p>I did not encounter any performance issues during the period I tested. There were a few connection drops for some specific locations, for example, Hong Kong and Shenzen, but generally, I can say that Meson has reliable service. </p>
+<h3 id="pricing">Pricing</h3>
+<p>The pricing is really simple. $0.01/Gb.</p>
+<p>It&rsquo;s cheap compared to other alternatives. However, I think it will be a little cheaper in the future.
+ </p>
+<h3 id="what-i-think-is-missing-in-this-project">What I think is missing in this project</h3>
+<p>I think they must build their own anycast network asap.</p>
+<p> 
+Anycast is a network addressing and routing methodology in which a single destination IP address is shared by devices in multiple locations. The nearest device responds to requests, giving end users access to fast service without the high latency issues that can be caused by traditional geo-location solutions. This reduces latency as well as packet loss rates because data can travel on routes that are optimized for speed and not just the shortest distance. </p>
+<blockquote>
+<p>Meson 3.0 current architecture
+<img loading="lazy" src="/img/meson-netw.png" alt="meson-netw"  />
+</p>
+</blockquote>
+<blockquote>
+<p>Anycast example (google.com architecture)
+<img loading="lazy" src="/img/google-anycast.png" alt="google-anycast"  />
+</p>
+</blockquote>
+<p>Anycast network will increase the CDN performance tremendously. They are currently using a single VM to share the network traffic. That VM might be powerful and well-located, but it&rsquo;s still a single point of failure. That&rsquo;s why I think anycast is so important in the future of Meson.
+ </p>
+<h3 id="future">Future</h3>
+<p>Nobody knows what will happen in the future. But I think Meson Network can be the next Airbnb for the CDN industry.
+ 
+Fun fact: This website is also powered by Meson and Akash.</p>
+<p>..Akash? Yes, my next post will be about it :)</p>
+]]></content:encoded>
     </item>
     
   </channel>

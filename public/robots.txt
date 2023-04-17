@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://ntmv.net/sitemap.xml

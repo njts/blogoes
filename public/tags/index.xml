@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on NTMV</title>
     <link>https://ntmv.net/tags/</link>
     <description>Recent content in Tags on NTMV</description>
+    <image>
+      <title>NTMV</title>
+      <url>https://ntmv.net/cover/twitter-cover.jpg</url>
+      <link>https://ntmv.net/cover/twitter-cover.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Feb 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Apr 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://ntmv.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>web3</title>
+      <link>https://ntmv.net/tags/web3/</link>
+      <pubDate>Sun, 16 Apr 2023 11:30:03 +0000</pubDate>
+      
+      <guid>https://ntmv.net/tags/web3/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>rss</title>
       <link>https://ntmv.net/tags/rss/</link>
@@ -13,15 +28,7 @@
       
       <guid>https://ntmv.net/tags/rss/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>web3</title>
-      <link>https://ntmv.net/tags/web3/</link>
-      <pubDate>Wed, 14 Dec 2022 11:30:03 +0000</pubDate>
-      
-      <guid>https://ntmv.net/tags/web3/</guid>
-      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -31,6 +38,7 @@
       
       <guid>https://ntmv.net/tags/web-development/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
@@ -40,6 +48,7 @@
       
       <guid>https://ntmv.net/tags/faq/</guid>
       <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
   </channel>
