@@ -98,7 +98,7 @@ Our competitors include Pinata, Filebase, and Web3.storage. While our product sh
 
 One of the most notable benefits is its vendor-agnostic design, which allows it to be used with local storage. This means that a client can be installed on a storage VPS and used to utilize its storage capacity. Additionally, we provide a managed cloud service, which is a plug-and-play solution.
 
-Another important feature is its 1GB file cache, enabling us to deliver high-quality video files quickly. It's powered by over 30k Meson 3.0 nodes distributed worldwide, allowing us to deliver files to millions of users in seconds through our CDN node network, which is continuously expanding, with an uptime rate nearing 99.9%.
+Another important feature is its 1GB file cache, enabling us to deliver high-quality video files quickly. It's powered by over 30k Meson 3.0 nodes distributed worldwide, allowing us to deliver files to millions of users in milliseconds through our CDN node network, which is continuously expanding, with an uptime rate nearing 99.9%.
 
 We also offer file replication to Filecoin, a dedicated upload gateway, dedicated gateway bandwidth, limitless requests, and other features.
 
