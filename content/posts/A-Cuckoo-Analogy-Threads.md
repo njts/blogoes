@@ -37,7 +37,7 @@ editPost:
 ---
 ## Some cuckoos are just assassins.
 
->  A bird called the common cuckoo uses a sneaky strategy to raise its babies. First, a female cuckoo finds a nest built by a bird of a different species. For example, it might be a great reed warbler. Then, she sneaks into the warblers’ nest, lays an egg and flies away. The warblers often accept the new egg. Indeed, they take care of it along with their own eggs. The cuckoo chick hatches before the warbler chicks. And it wants all the food from the warbler parents for itself. So the young cuckoo pushes the warbler eggs onto its back, one by one. It braces its feet on the sides of the nest and rolls each egg over the edge. Smash! [1]
+>  A bird called the common cuckoo uses a sneaky strategy to raise its babies. First, a female cuckoo finds a nest built by a bird of a different species. For example, it might be a great reed warbler. Then, she sneaks into the warblers’ nest, lays an egg and flies away. The warblers often accept the new egg. Indeed, they take care of it along with their own eggs. The cuckoo chick hatches before the warbler chicks. And it wants all the food from the warbler parents for itself. So the young cuckoo pushes the warbler eggs onto its back, one by one. It braces its feet on the sides of the nest and rolls each egg over the edge. Smash! [[1]](https://www.snexplores.org/article/bird-fish-insect-parenting-cuckoo-brood-parasite)
 
 
 ## Threads will destroy Fediverse if they succeed.
